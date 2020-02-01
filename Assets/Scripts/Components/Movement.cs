@@ -11,16 +11,16 @@ namespace Component {
         private Vector3 destination = Vector3.zero;
 
         void Start() {
-            origin = this.transform.position;
-            destination = this.transform.position;
+            origin = transform.position;
+            destination = origin;
         }
 
         void Update() {
             if (isMoving()) {
                 float distance = Speed * Time.deltaTime;
-                this.transform.Translate(distance * (destination - origin));
+                transform.Translate(distance * (destination - origin));
                 Debug.Log(destination - origin);
-                var closeEnough = (this.destination - this.transform.position).sqrMagnitude < 0.1f;
+                var closeEnough = (destination - transform.position).sqrMagnitude < 0.1f;
                 if(closeEnough) {
                     this.transform.position = destination;
                     origin = destination;
@@ -29,7 +29,7 @@ namespace Component {
         }
 
         public bool isMoving() {
-            return destination != origin;
+            return (destination - origin).sqrMagnitude > 0.1f;
         }
 
         public void Move(MovementDirection direction) {
