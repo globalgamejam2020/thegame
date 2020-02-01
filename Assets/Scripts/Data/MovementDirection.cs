@@ -3,7 +3,6 @@ using System;
 namespace Data {
     [Flags]
     public enum MovementDirection : byte {
-        IDLE = 0,
         NORTH = 1,
         EAST = 2,
         SOUTH = 4,
@@ -11,8 +10,7 @@ namespace Data {
     }
 
     [Flags]
-    public enum MovementStyle : byte
-    {
+    public enum MovementStyle : byte {
         IDLE = 1,
         STRAIGHT = 2,
         TURNL = 4,

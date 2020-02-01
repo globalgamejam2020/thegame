@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4715771084370951719}
   - component: {fileID: 4715771084370951718}
   - component: {fileID: 4418509545149333653}
-  - component: {fileID: 4099283951312605495}
+  - component: {fileID: 5752955639301950063}
   m_Layer: 10
   m_Name: Unicorn
   m_TagString: Untagged
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 006fdf578f8c3dd4f9089f3a67595749, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 180e434b2393b43f4843ccdbc4ee4c7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,8 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
-  Position: {x: 0, y: 0}
-  Change: {x: 0, y: 0}
 --- !u!95 &4418509545149333653
 Animator:
   serializedVersion: 3
@@ -121,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 4715771084370951715}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1753ad4edb09084eb10965e22a9f64c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -130,7 +128,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4099283951312605495
+--- !u!114 &5752955639301950063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,6 +140,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b0772324e604ebbb9ad8c7f9cc73f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSprites: []
-  actionSprites: []
+  movementSprites:
+  - {fileID: 21300000, guid: 180e434b2393b43f4843ccdbc4ee4c7e, type: 3}
+  - {fileID: 21300000, guid: b2e671e69308e4385aea2ee338041743, type: 3}
+  - {fileID: 21300000, guid: 6aaf6480442d140debf40710ce52f92f, type: 3}
+  - {fileID: 21300000, guid: b2e671e69308e4385aea2ee338041743, type: 3}
+  - {fileID: 21300000, guid: 4e9fb6393b7f34230a663ea72fec56a0, type: 3}
+  - {fileID: 21300000, guid: 8bc9b1b602e7d4351b933bc06c8b5cda, type: 3}
+  - {fileID: 21300000, guid: f4e4facccf7874d95b802f1955f98aba, type: 3}
+  - {fileID: 21300000, guid: e613ebf42656b4142901a2370d3e449c, type: 3}
+  - {fileID: 21300000, guid: 796861ef9ddfa43238d3bfc4fa21a1ae, type: 3}
+  - {fileID: 21300000, guid: 19e3438d0e23140ffb3c6d79a3b92b9d, type: 3}
+  actionSprites:
+  - {fileID: 21300000, guid: b88ebf24d57604f9982abbb484e3692a, type: 3}
+  - {fileID: 21300000, guid: d73468d1b14fe4d6c86eb85d3d90a5d1, type: 3}
   animationSpeed: 1
