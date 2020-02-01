@@ -8,7 +8,7 @@ namespace Player {
     public class Player : MonoBehaviour {
 
         private Movement movement;
-        
+
         private void Start() {
             this.movement = GetComponent<Movement>();
         }
