@@ -10,43 +10,47 @@ namespace Component {
         private Vector3 origin = Vector3.zero;
         private Vector3 destination = Vector3.zero;
 
+        private MovementDirection direction = 0;
+
         void Start() {
             origin = transform.position;
             destination = origin;
         }
 
         void Update() {
-            if (isMoving()) {
-                float distance = Speed * Time.deltaTime;
-                transform.Translate(distance * (destination - origin));
-                Debug.Log(destination - origin);
-                var closeEnough = (destination - transform.position).sqrMagnitude < 0.1f;
-                if(closeEnough) {
-                    this.transform.position = destination;
-                    origin = destination;
-                }
-            }
+            if (isMoving()) Move();
+        }
+
+        private void Move() {
+            float distance = Speed * Time.deltaTime;
+            transform.Translate(distance * (destination - origin));
+            var closeEnough = (destination - transform.position).sqrMagnitude < 0.1f;
+            if (closeEnough) StopMovement();
+        }
+
+        private void StopMovement() {
+            direction = 0;
+            transform.position = destination;
+            origin = destination;
         }
 
         public bool isMoving() {
-            return (destination - origin).sqrMagnitude > 0.1f;
+            return direction != 0;
+        }
+
+        public MovementDirection GetMovementDirection() {
+            return direction;
         }
 
         public void Move(MovementDirection direction) {
-            if(isMoving())
-                return;
-            Debug.Log("moving");
-            if (direction.Matches(MovementDirection.NORTH)) {
-                destination.y += 1f;
-            } else if (direction.Matches(MovementDirection.SOUTH)) {
-                destination.y += -1f;
-            }
+            if (isMoving()) return;
 
-            if (direction.Matches(MovementDirection.EAST)) {
-                destination.x += 1f;
-            } else if (direction.Matches(MovementDirection.WEST)) {
-                destination.x += -1f;
-            }
+            this.direction = direction;
+            if (direction.Matches(MovementDirection.NORTH)) destination.y += 1f;
+            else if (direction.Matches(MovementDirection.SOUTH)) destination.y += -1f;
+
+            if (direction.Matches(MovementDirection.EAST)) destination.x += 1f;
+            else if (direction.Matches(MovementDirection.WEST)) destination.x += -1f;
         }
     }
 }
