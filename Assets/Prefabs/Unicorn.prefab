@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4715771084370951716}
   - component: {fileID: 4715771084370951719}
   - component: {fileID: 4715771084370951718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Unicorn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
