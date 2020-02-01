@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Component {
     public class Movement : MonoBehaviour {
-        [SerializeField] private float Speed = 0.5f;
+        [SerializeField] private float Speed = 0.05f;
         [SerializeField] private Vector2 Position = Vector2.zero;
 
         private Vector2 Change = Vector2.zero;
@@ -35,7 +35,7 @@ namespace Component {
 
         public void Move(MovementDirection direction) {
             if (direction.Matches(MovementDirection.NORTH)) {
-                Change.y = 1f;
+                Change.y = 1f * Speed;
             } else if (direction.Matches(MovementDirection.SOUTH)) {
                 Change.y = -1f * Speed;
             }
