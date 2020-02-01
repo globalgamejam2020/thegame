@@ -17,6 +17,7 @@ public class HumanController : MonoBehaviour {
 
     void Update() {
         if(!movement.isMoving() && canMove) {
+            Debug.Log("human moving");
             canMove = false;
             movement.Move(Data.MovementDirection.NORTH);
         }
