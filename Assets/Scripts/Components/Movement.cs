@@ -110,7 +110,7 @@ namespace Component {
             targetEuler = angles;
 
             var upSize = destination + UpSize(direction);
-            Debug.Log($"upsize: {upSize}");
+            // Debug.Log($"upsize: {upSize}");
             
             if (!GridSystem.Instance.AllowsMovement(destination)
                 || !GridSystem.Instance.AllowsMovement(upSize)) {

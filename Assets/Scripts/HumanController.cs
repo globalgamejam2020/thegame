@@ -58,20 +58,34 @@ public class HumanController : MonoBehaviour {
     }
 
     private void createVisionCone() {
-        // Raycast leftEdge = Physics2D.Raycast();
-        // UnityEngine.Vector3[] verticies = new UnityEngine.Vector3[] {
-            
-        // };
+        GameObject[] verticies = GameObject.FindGameObjectsWithTag("verticies");
+
+        List<UnityEngine.Vector2> visionConeVector2 = new List<UnityEngine.Vector2> {
+            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-alertRadius, alertRadius), new UnityEngine.Vector2(alertRadius, alertRadius)
+        };
+
+        List<UnityEngine.Vector3> visionConeVector3 = new List<UnityEngine.Vector3> {
+            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(-alertRadius, alertRadius, 0), new UnityEngine.Vector3(alertRadius, alertRadius, 0)
+        };
+
+        RaycastHit2D leftHit = Physics2D.Raycast(new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-alertRadius, alertRadius), alertRadius);
+        if(leftHit.collider != null) {
+            Debug.Log(leftHit.point);
+            visionConeVector2.Insert(1, leftHit.point);
+            visionConeVector2[2] = new UnityEngine.Vector2(leftHit.point.x, alertRadius);
+        }
+        RaycastHit2D rightHit = Physics2D.Raycast(new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(alertRadius, alertRadius), alertRadius);
+        if(rightHit.collider != null) {
+            Debug.Log(rightHit.point);
+            visionConeVector2.Insert(1, rightHit.point);
+            visionConeVector2[2] = new UnityEngine.Vector2(rightHit.point.x, alertRadius);
+        }
 
         MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
         var visionConeMesh = visionCone.mesh;
         visionConeMesh.Clear();
-        visionConeMesh.uv = new UnityEngine.Vector2[] {
-            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f), new UnityEngine.Vector2(2f, 2f)
-        };
-        visionConeMesh.vertices = new UnityEngine.Vector3[] {
-            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(-2f, 2f, 0), new UnityEngine.Vector3(2f, 2f, 0)
-        };
+        visionConeMesh.vertices = visionConeVector3.ToArray();
+        visionConeMesh.uv = visionConeVector2.ToArray();
         visionConeMesh.triangles = new int[] { 0, 1, 2 };
     }
 }
