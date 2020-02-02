@@ -16,7 +16,7 @@ public class HumanController : MonoBehaviour {
 
     void Start() {
         movement = GetComponent<Movement>();
-
+        animationController = GetComponent<AnimationController>();
         float nextInvoke = Random.Range(1f, 5f);
         Invoke("Litter", nextInvoke);
     }
