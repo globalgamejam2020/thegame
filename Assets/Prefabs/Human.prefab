@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolPoints: []
   alertRadius: 10
-  human: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &8592110019382987623
 MonoBehaviour:
   m_ObjectHideFlags: 0
