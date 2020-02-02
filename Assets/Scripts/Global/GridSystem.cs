@@ -35,7 +35,16 @@ namespace Global {
                 }
             }
         }
+        
+        public bool IsOutOfBounds(Vector3 position) {
+            var bounds = GroundBounds();
 
+            return position.x < bounds.xMin
+                   || position.x > bounds.xMax
+                   || position.y < bounds.yMin
+                   || position.y > bounds.yMax;
+        }
+        
         public BoundsInt GroundBounds() {
             ground.CompressBounds();
             return ground.cellBounds;
@@ -43,13 +52,18 @@ namespace Global {
 
         public bool AllowsVision(Vector3 position) {
             var tile = objects.GetTile(ToVector3Int(position));
-            var type = GetType(tile != null ? tile.name : null);
+            if (ReferenceEquals(tile, null)) return true;
+
+            var type = GetType(tile.name);
             return type?.AllowsVision() ?? true;
         }
 
         public bool AllowsMovement(Vector3 position) {
+            if (IsOutOfBounds(position)) return false;
             var tile = objects.GetTile(ToVector3Int(position));
-            var type = GetType(tile != null ? tile.name : null);
+            if (ReferenceEquals(tile, null)) return true;
+
+            var type = GetType(tile.name);
             return type?.AllowsMovement() ?? true;
         }
 
@@ -88,7 +102,7 @@ namespace Global {
         }
 
         private static Vector3Int ToVector3Int(Vector3 v) {
-            return new Vector3Int((int) (v.x + 0.5f), (int) (v.y + 0.5f), (int) v.z);
+            return new Vector3Int((int) (v.x), (int) (v.y), (int) v.z);
         }
     }
 }
