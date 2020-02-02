@@ -68,6 +68,7 @@ namespace Component
 
         private void LatePlayFinal()
         {
+            audioSource.volume = 0.7f;
             audioSource.clip = finalFX[0];
             audioSource.Play();
         }

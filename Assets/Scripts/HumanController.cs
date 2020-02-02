@@ -6,7 +6,8 @@ using UnityEngine;
 using Component;
 using Data;
 
-public class HumanController : MonoBehaviour {
+public class HumanController : MonoBehaviour
+{
 
     [SerializeField] private GameObject[] patrolPoints;
     [SerializeField] private int nextPatrolPointIndex = 0;
@@ -14,7 +15,8 @@ public class HumanController : MonoBehaviour {
     [SerializeField] private Movement movement;
     private AnimationController animationController;
 
-    void Start() {
+    void Start()
+    {
         movement = GetComponent<Movement>();
         animationController = GetComponent<AnimationController>();
         float nextInvoke = Random.Range(1f, 5f);
@@ -29,25 +31,30 @@ public class HumanController : MonoBehaviour {
         Invoke("Litter", nextInvoke);
     }
 
-    void Update() {
-        if(patrolPoints.Length != 0) {
-            if(patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position) {
-                nextPatrolPointIndex ++;
+    void Update()
+    {
+        if (patrolPoints.Length != 0)
+        {
+            if (patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position)
+            {
+                nextPatrolPointIndex++;
             }
         }
 
-        if(!movement.isMoving()) {
+        if (!movement.isMoving())
+        {
             planMovement();
         }
 
         createVisionCone();
     }
 
-    void planMovement() {
-        if(patrolPoints.Length == 0)
+    void planMovement()
+    {
+        if (patrolPoints.Length == 0)
             return;
-        if(nextPatrolPointIndex == patrolPoints.Length)
-                nextPatrolPointIndex = 0;
+        if (nextPatrolPointIndex == patrolPoints.Length)
+            nextPatrolPointIndex = 0;
 
         MovementDirection direction = 0;
 
@@ -55,22 +62,29 @@ public class HumanController : MonoBehaviour {
 
         float epsilon = 0.0f;
 
-        if(destination.y < this.transform.position.y + epsilon) {
+        if (destination.y < this.transform.position.y + epsilon)
+        {
             direction |= MovementDirection.SOUTH;
-        } else if (destination.y > this.transform.position.y - epsilon) {
+        }
+        else if (destination.y > this.transform.position.y - epsilon)
+        {
             direction |= MovementDirection.NORTH;
         }
 
-        if(destination.x < this.transform.position.x + epsilon) {
+        if (destination.x < this.transform.position.x + epsilon)
+        {
             direction |= MovementDirection.WEST;
-        } else if (destination.x > this.transform.position.x - epsilon) {
+        }
+        else if (destination.x > this.transform.position.x - epsilon)
+        {
             direction |= MovementDirection.EAST;
         }
 
         movement.Move(direction);
     }
 
-    private void createVisionCone() {
+    private void createVisionCone()
+    {
 
         // UnityEngine.Vector2[] endPoints = new UnityEngine.Vector2[9];
         // List<UnityEngine.Vector2> visionConeVector2 = new List<UnityEngine.Vector2>();
@@ -113,3 +127,4 @@ public class HumanController : MonoBehaviour {
         //     visionConeMesh.RecalculateNormals();
         //     visionConeMesh.triangles = triangles.ToArray();
     }
+}
