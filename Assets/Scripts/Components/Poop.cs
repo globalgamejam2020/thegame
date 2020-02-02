@@ -62,7 +62,7 @@ namespace Component {
                 Destroy(this, 2.0f);
                 GameObject tree = Resources.Load<GameObject>("GameObjects/Tree");
                 Debug.Log(tree);
-                Instantiate(tree, this.transform.position, Quaternion.identity);
+                Instantiate(tree, this.finalPosition, Quaternion.identity);
                 shouldUpdate = false;
             }
         }

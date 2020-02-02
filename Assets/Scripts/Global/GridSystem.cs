@@ -9,6 +9,7 @@ namespace Global {
 
         [SerializeField] private GameObject HumanPrefab;
         [SerializeField] private GameObject SquirrelPrefab;
+        [SerializeField] private GameObject TreePrefab;
 
         private Tilemap ground;
         private Tilemap objects;
@@ -22,20 +23,23 @@ namespace Global {
                     ground = tilemap;
                 } else if ("Objects".Equals(tilemap.gameObject.name)) {
                     objects = tilemap;
+                    ReplaceByPrefab(tilemap);
                 } else if ("Characters".Equals(tilemap.gameObject.name)) {
-                    foreach (var position in tilemap.cellBounds.allPositionsWithin) {
-                        var tile = tilemap.GetTile(position);
-                        if (tile == null) continue;
-
-                        PlaceCharacterPrefab(tile, position);
-                        tilemap.SetTile(position, null);
-                    }
-
+                    ReplaceByPrefab(tilemap);
                     tilemap.enabled = false;
                 }
             }
         }
-        
+
+        private void ReplaceByPrefab(Tilemap tilemap) {
+            foreach (var position in tilemap.cellBounds.allPositionsWithin) {
+                var tile = tilemap.GetTile(position);
+                if (tile == null) continue;
+
+                if (PlaceCharacterPrefab(tile, position)) tilemap.SetTile(position, null);
+            }
+        }
+
         public bool IsOutOfBounds(Vector3 position) {
             var bounds = GroundBounds();
 
@@ -44,7 +48,7 @@ namespace Global {
                    || position.y < bounds.yMin
                    || position.y >= bounds.yMax;
         }
-        
+
         public BoundsInt GroundBounds() {
             ground.CompressBounds();
             return ground.cellBounds;
@@ -69,6 +73,7 @@ namespace Global {
 
         private ObjectType? GetType([CanBeNull] String name) {
             if (ReferenceEquals(name, null)) return null;
+            name = name.ToLower();
 
             if (name.StartsWith("bldg")) return ObjectType.BUILDING;
             if (name.StartsWith("grass")) return ObjectType.GRASS;
@@ -79,17 +84,19 @@ namespace Global {
             return null;
         }
 
-        private void PlaceCharacterPrefab(TileBase tile, Vector3Int position) {
-            switch (tile.name) {
-                case "Human":
-                    Instantiate(HumanPrefab, ToVector3(position), Quaternion.identity);
-                    break;
-                case "Squirrel":
-                    Instantiate(SquirrelPrefab, ToVector3(position), Quaternion.identity);
-                    break;
-                default:
-                    return;
-            }
+        private bool PlaceCharacterPrefab(TileBase tile, Vector3Int position) {
+            if (ReferenceEquals(tile, null)) return false;
+            var name = tile.name.ToLower();
+
+            if (name.StartsWith("human")) return InstantiateTile(HumanPrefab, position);
+            if (name.StartsWith("squirrel")) return InstantiateTile(SquirrelPrefab, position);
+            if (name.StartsWith("tree")) return InstantiateTile(TreePrefab, position);
+            return false;
+        }
+
+        private bool InstantiateTile(GameObject prefab, Vector3Int position) {
+            Instantiate(prefab, ToVector3(position), Quaternion.identity);
+            return true;
         }
 
         private static Vector3 ToVector3(Vector3Int v) {
