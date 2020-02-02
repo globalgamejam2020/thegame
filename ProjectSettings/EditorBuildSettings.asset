@@ -6,14 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro scene.unity
+    guid: 1423caf66f85941ce987a0dce87bcc74
+  - enabled: 1
     path: Assets/Scenes/campaign1.unity
     guid: b73c2781c5bb34c1eb8e29317ed40431
+  - enabled: 1
+    path: Assets/Scenes/campaign3.unity
+    guid: dcce4759775e34bf88e12e2219abf79b
+  - enabled: 1
+    path: Assets/Scenes/campaign4.unity
+    guid: d8bef0329f2074f9db8f23eaadca4cba
   - enabled: 1
     path: Assets/Scenes/SceneLevel1.unity
     guid: c88f10edd77d345568d9033a46bc33c1
   - enabled: 1
     path: Assets/Scenes/SceneLevel2.unity
     guid: fd09522ac852d4a278ce9ed1cc4ccb8a
+  - enabled: 1
+    path: Assets/Scenes/Scenefreeplay.unity
+    guid: 20dbbd63884194755a2c8d019ac08d8e
   - enabled: 1
     path: Assets/Scenes/End credits.unity
     guid: 761e2445250e749ebaacd7667b664289
