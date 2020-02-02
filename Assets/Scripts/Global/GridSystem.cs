@@ -41,14 +41,18 @@ namespace Global {
         }
 
         public bool AllowsVision(Vector3 position) {
+            if (ReferenceEquals(Objects, null)) return true;
+            
             var tile = Objects.GetTile(ToVector3Int(position));
-            var type = GetType(tile != null ? tile.name : null);
+            var type = GetType(tile?.name);
             return type?.AllowsVision() ?? true;
         }
 
         public bool AllowsMovement(Vector3 position) {
+            if (ReferenceEquals(Objects, null)) return true;
+
             var tile = Objects.GetTile(ToVector3Int(position));
-            var type = GetType(tile != null ? tile.name : null);
+            var type = GetType(tile?.name);
             return type?.AllowsMovement() ?? true;
         }
 
