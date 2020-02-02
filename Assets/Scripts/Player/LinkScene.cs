@@ -7,7 +7,7 @@ namespace Player {
     public class LinkScene: MonoBehaviour {
         [SerializeField] private String scene;
 
-        private void OnMouseUp() {
+        public void LoadScene() {
             SceneManager.LoadScene(scene);
         }
     }
