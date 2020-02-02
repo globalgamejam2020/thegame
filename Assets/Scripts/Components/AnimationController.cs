@@ -8,7 +8,7 @@ namespace Component {
         [SerializeField] private GameObject smallPooPrefab;
         [SerializeField] private GameObject mediumPooPrefab;
         [SerializeField] private GameObject bigPooPrefab;
-        
+
         private Movement movement;
         private Animator animator;
 
@@ -33,11 +33,16 @@ namespace Component {
             animator.SetTrigger("Poop");
         }
 
+        public void Rabid() {
+            animator.SetTrigger("Rabid");
+        }
+
+        public void Attack() {
+            animator.SetTrigger("Attack");
+        }
+
         public void DropPoop() {
-            
-            
-            
-            new Poop(transform.position);
+            new Poop(transform.position - transform.up * 0.7f);
             Debug.Log("POOP");
         }
 

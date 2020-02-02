@@ -11,6 +11,9 @@ namespace Component
         public List<AudioClip> modalFX;
         public List<AudioClip> finalFX;
 
+        public List<AudioClip> move2FX;
+        public List<AudioClip> modal2FX;
+
         private AudioSource audioSource;
 
         private HashSet<int> moveFXIndexSet = new HashSet<int>();
@@ -23,6 +26,8 @@ namespace Component
             FX_dict.Add("move", moveFX);
             FX_dict.Add("modal", modalFX);
             FX_dict.Add("final", finalFX);
+            FX_dict.Add("move2", move2FX);
+            FX_dict.Add("modal2", modal2FX);
 
             InitHashSet();
 
