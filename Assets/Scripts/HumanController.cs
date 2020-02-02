@@ -67,13 +67,11 @@ public class HumanController : MonoBehaviour {
         var visionConeMesh = visionCone.mesh;
         visionConeMesh.Clear();
         visionConeMesh.uv = new UnityEngine.Vector2[] {
-            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(0, 2f), new UnityEngine.Vector2(2f, 2f)
+            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f), new UnityEngine.Vector2(2f, 2f)
         };
-        Debug.Log(visionConeMesh.uv);
         visionConeMesh.vertices = new UnityEngine.Vector3[] {
-            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(0, 2f, 0), new UnityEngine.Vector3(2f, 2f, 0)
+            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(-2f, 2f, 0), new UnityEngine.Vector3(2f, 2f, 0)
         };
-        Debug.Log(visionConeMesh);
         visionConeMesh.triangles = new int[] { 0, 1, 2 };
     }
 }
