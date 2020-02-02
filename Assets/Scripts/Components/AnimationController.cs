@@ -5,21 +5,13 @@ using Data;
 
 namespace Component {
     public class AnimationController : MonoBehaviour {
-        public Sprite[] movementSprites; //0,1,2,3 Idle - 4,5 LTurn - 6,7 RTurn - 8,9 Straight
-        public Sprite[] actionSprites;
-
         private Movement movement;
-        private SpriteRenderer spriteRenderer;
         private Animator animator;
-
-        public int animationSpeed = 1;
 
         // Start is called before the first frame update
         void Start() {
             movement = GetComponent<Movement>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
-
         }
 
         // Update is called once per frame
@@ -40,7 +32,15 @@ namespace Component {
 
         public void Poop()
         {
+            if (movement.isMoving()) return;
+
             animator.SetTrigger("Poop");
+        }
+
+        public void DropPoop()
+        {
+            new Poop(transform.position);
+            Debug.Log("POOP");
         }
 
         public void SetTurnDirection(float turnDirection)
@@ -48,11 +48,5 @@ namespace Component {
             animator.SetFloat("TurnDirection", turnDirection);
         }
 
-        public void Animate() {
-            int time = Time.frameCount / (20 / animationSpeed);
-
-            Sprite desiredSprite = movementSprites[time];
-            spriteRenderer.sprite = desiredSprite;
-        }
     }
 }
