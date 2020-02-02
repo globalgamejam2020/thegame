@@ -24,7 +24,8 @@ namespace Component {
 
         // Update is called once per frame
         void Update() {
-            Animate();
+            if (movement.isMoving() && animator.GetBool("idle") == true) animator.SetBool("idle", false);
+            else if (!movement.isMoving() && animator.GetBool("idle") == false) animator.SetBool("idle", true);
         }
 
         public void Idle(bool idle)
