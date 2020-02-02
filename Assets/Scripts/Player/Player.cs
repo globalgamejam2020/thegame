@@ -8,9 +8,11 @@ namespace Player {
     public class Player : MonoBehaviour {
 
         private Movement movement;
+        private AnimationController animationController;
 
         private void Start() {
             this.movement = GetComponent<Movement>();
+            animationController = GetComponent<AnimationController>();
         }
 
         private void Update() {
@@ -25,6 +27,8 @@ namespace Player {
             if (horizontal < 0) direction |= MovementDirection.WEST;
 
             movement.Move(direction);
+
+            if (Input.GetKeyDown(KeyCode.Space)) { Debug.Log("should poop"); animationController.Poop(); }
         }
     }
 }

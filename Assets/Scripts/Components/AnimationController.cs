@@ -5,54 +5,49 @@ using Data;
 
 namespace Component {
     public class AnimationController : MonoBehaviour {
-        public Sprite[] movementSprites; //0,1,2,3 Idle - 4,5 LTurn - 6,7 RTurn - 8,9 Straight
-        public Sprite[] actionSprites;
+        [SerializeField] private GameObject smallPooPrefab;
+        [SerializeField] private GameObject mediumPooPrefab;
+        [SerializeField] private GameObject bigPooPrefab;
 
         private Movement movement;
-        private SpriteRenderer spriteRenderer;
         private Animator animator;
-
-        public int animationSpeed = 1;
 
         // Start is called before the first frame update
         void Start() {
             movement = GetComponent<Movement>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
-
         }
 
         // Update is called once per frame
         void Update() {
-            if (movement.isMoving() && animator.GetBool("idle") == true) animator.SetBool("idle", false);
-            else if (!movement.isMoving() && animator.GetBool("idle") == false) animator.SetBool("idle", true);
+            if (movement.isMoving()) animator.SetTrigger("Walking");
         }
 
-        public void Idle(bool idle)
-        {
-            animator.SetBool("idle", idle);
+        public void Turning(bool turning) {
+            animator.SetBool("Turning", turning);
         }
 
-        public void Turning(bool turning)
-        {
-            animator.SetBool("idle", turning);
-        }
+        public void Poop() {
+            if (movement.isMoving()) return;
 
-        public void Poop()
-        {
             animator.SetTrigger("Poop");
         }
 
-        public void SetTurnDirection(float turnDirection)
-        {
-            animator.SetFloat("TurnDirection", turnDirection);
+        public void Rabid() {
+            animator.SetTrigger("Rabid");
         }
 
-        public void Animate() {
-            int time = Time.frameCount / (20 / animationSpeed);
+        public void Attack() {
+            animator.SetTrigger("Attack");
+        }
 
-            Sprite desiredSprite = movementSprites[time];
-            spriteRenderer.sprite = desiredSprite;
+        public void DropPoop() {
+            new Poop(transform.position - transform.up * 0.7f);
+            Debug.Log("POOP");
+        }
+
+        public void SetTurnDirection(float turnDirection) {
+            animator.SetFloat("TurnDirection", turnDirection);
         }
     }
 }

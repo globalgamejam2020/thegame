@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 36752104}
   m_Layer: 10
   m_Name: Unicorn
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e90d57837ee472cb7747728db9f03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 2
+  Size: 2
 --- !u!95 &4418509545149333653
 Animator:
   serializedVersion: 3
@@ -142,21 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b0772324e604ebbb9ad8c7f9cc73f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSprites:
-  - {fileID: 21300000, guid: 180e434b2393b43f4843ccdbc4ee4c7e, type: 3}
-  - {fileID: 21300000, guid: b2e671e69308e4385aea2ee338041743, type: 3}
-  - {fileID: 21300000, guid: 6aaf6480442d140debf40710ce52f92f, type: 3}
-  - {fileID: 21300000, guid: b2e671e69308e4385aea2ee338041743, type: 3}
-  - {fileID: 21300000, guid: 4e9fb6393b7f34230a663ea72fec56a0, type: 3}
-  - {fileID: 21300000, guid: 8bc9b1b602e7d4351b933bc06c8b5cda, type: 3}
-  - {fileID: 21300000, guid: f4e4facccf7874d95b802f1955f98aba, type: 3}
-  - {fileID: 21300000, guid: e613ebf42656b4142901a2370d3e449c, type: 3}
-  - {fileID: 21300000, guid: 796861ef9ddfa43238d3bfc4fa21a1ae, type: 3}
-  - {fileID: 21300000, guid: 19e3438d0e23140ffb3c6d79a3b92b9d, type: 3}
-  actionSprites:
-  - {fileID: 21300000, guid: b88ebf24d57604f9982abbb484e3692a, type: 3}
-  - {fileID: 21300000, guid: d73468d1b14fe4d6c86eb85d3d90a5d1, type: 3}
-  animationSpeed: 1
 --- !u!114 &36752110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +161,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fd3198ef29f6a40daa6960969f13610b, type: 3}
   - {fileID: 8300000, guid: 3da496404dfdd488cb029ddf5ff9cdcc, type: 3}
   - {fileID: 8300000, guid: 388c004251af849eda3f6ab91d418852, type: 3}
-  modalFX: []
+  modalFX:
+  - {fileID: 8300000, guid: b6987499005224dd688373ba2d418c80, type: 3}
+  - {fileID: 8300000, guid: 8db4fc29aa81a448c879f2d7705b59f8, type: 3}
+  - {fileID: 8300000, guid: 691eb89f7897b47ab8255a20b085cdd7, type: 3}
+  - {fileID: 8300000, guid: 6652ef92e00ae4cb79feee9b2a43186d, type: 3}
+  - {fileID: 8300000, guid: 2351c44347c3b4ef0ab83085bbf731bb, type: 3}
   finalFX: []
 --- !u!82 &36752104
 AudioSource:
