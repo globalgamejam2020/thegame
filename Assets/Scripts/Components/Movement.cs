@@ -23,7 +23,13 @@ namespace Component {
         }
 
         void Update() {
-            if (isMoving()) Move();
+            if (isMoving()) {
+                var angles = Vector3.zero;
+                angles.z = Mathf.LerpAngle(transform.eulerAngles.z, targetEuler.z, 10 * Time.deltaTime);
+                transform.localEulerAngles = angles;
+
+                Move();
+            }
         }
 
         public void CanMove(int canMove) {
@@ -32,10 +38,6 @@ namespace Component {
         }
 
         private void Move() {
-            var angles = Vector3.zero;
-            angles.z = Mathf.LerpAngle(transform.eulerAngles.z, targetEuler.z, 10 * Time.deltaTime);
-            transform.localEulerAngles = angles;
-
             var distanceToMove = DistanceToMove();
             transform.Translate(distanceToMove, Space.World);
             var distanceRemaining = (destination - transform.position).sqrMagnitude;
@@ -86,26 +88,32 @@ namespace Component {
             var angles = Vector3.zero;
             this.direction = direction;
 
+            var angleMultiplier = 1f;
             if (direction.Matches(MovementDirection.NORTH)) {
                 destination.y += 1f;
                 angles.z = 0;
+                angleMultiplier = 0.5f;
             } else if (direction.Matches(MovementDirection.SOUTH)) {
                 destination.y += -1f;
                 angles.z = 180;
+                angleMultiplier = 1.5f;
             }
 
             if (direction.Matches(MovementDirection.EAST)) {
                 destination.x += 1f;
-                angles.z = -90;
+                angles.z = -90 * angleMultiplier;
             } else if (direction.Matches(MovementDirection.WEST)) {
                 destination.x += -1f;
-                angles.z = 90;
+                angles.z = 90 * angleMultiplier;
             }
             
             targetEuler = angles;
 
+            var upSize = destination + UpSize(direction);
+            Debug.Log($"upsize: {upSize}");
+            
             if (!GridSystem.Instance.AllowsMovement(destination)
-                || !GridSystem.Instance.AllowsMovement(destination + UpSize(direction))) {
+                || !GridSystem.Instance.AllowsMovement(upSize)) {
                 destination = origin;
                 this.direction = 0;
             }

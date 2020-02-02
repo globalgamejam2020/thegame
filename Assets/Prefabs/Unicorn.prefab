@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  Size: 2
+  Size: 1
 --- !u!95 &4418509545149333653
 Animator:
   serializedVersion: 3
@@ -168,6 +168,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6652ef92e00ae4cb79feee9b2a43186d, type: 3}
   - {fileID: 8300000, guid: 2351c44347c3b4ef0ab83085bbf731bb, type: 3}
   finalFX: []
+  move2FX: []
+  modal2FX: []
 --- !u!82 &36752104
 AudioSource:
   m_ObjectHideFlags: 0
