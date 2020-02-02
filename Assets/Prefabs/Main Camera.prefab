@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  amount: 0.05
+  amount: 0.03
   decreaseFactor: 1
 --- !u!1 &7147681230324171492
 GameObject:
