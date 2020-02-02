@@ -24,10 +24,6 @@ namespace Component {
 
         void Update() {
             if (isMoving()) Move();
-            if (transform.eulerAngles != targetEuler) {
-                transform.eulerAngles = targetEuler;
-                targetEuler = transform.eulerAngles;
-            }
         }
 
         public void CanMove(int canMove) {
@@ -36,8 +32,12 @@ namespace Component {
         }
 
         private void Move() {
+            var angles = Vector3.zero;
+            angles.z = Mathf.LerpAngle(transform.eulerAngles.z, targetEuler.z, 10 * Time.deltaTime);
+            transform.localEulerAngles = angles;
+
             var distanceToMove = DistanceToMove();
-            transform.Translate(distanceToMove);
+            transform.Translate(distanceToMove, Space.World);
             var distanceRemaining = (destination - transform.position).sqrMagnitude;
             if (distanceRemaining < 0.001f || distanceRemaining > previousDistanceRemaining)
                 StopMovement();
@@ -83,17 +83,27 @@ namespace Component {
         public void Move(MovementDirection direction) {
             if (isMoving()) return;
 
+            var angles = Vector3.zero;
             this.direction = direction;
-            if (direction.Matches(MovementDirection.NORTH))
+
+            if (direction.Matches(MovementDirection.NORTH)) {
                 destination.y += 1f;
-            else if (direction.Matches(MovementDirection.SOUTH)) destination.y += -1f;
+                angles.z = 0;
+            } else if (direction.Matches(MovementDirection.SOUTH)) {
+                destination.y += -1f;
+                angles.z = 180;
+            }
 
-            if (direction.Matches(MovementDirection.EAST))
+            if (direction.Matches(MovementDirection.EAST)) {
                 destination.x += 1f;
-            else if (direction.Matches(MovementDirection.WEST)) destination.x += -1f;
-
-            Rotate(direction);
+                angles.z = -90;
+            } else if (direction.Matches(MovementDirection.WEST)) {
+                destination.x += -1f;
+                angles.z = 90;
+            }
             
+            targetEuler = angles;
+
             if (!GridSystem.Instance.AllowsMovement(destination)
                 || !GridSystem.Instance.AllowsMovement(destination + UpSize(direction))) {
                 destination = origin;
@@ -103,26 +113,6 @@ namespace Component {
 
         private Vector3 UpSize(MovementDirection direction) {
             return direction.Up() * Size;
-        }
-
-        public void Rotate(MovementDirection direction) {
-            if (direction.Matches(MovementDirection.NORTH)) {
-                if (direction.Matches(MovementDirection.EAST))
-                    targetEuler = new Vector3(0f, 0f, -45f);
-                else if (direction.Matches(MovementDirection.WEST))
-                    targetEuler = new Vector3(0f, 0f, 45f);
-                else
-                    targetEuler = new Vector3(0f, 0f, 0f);
-            } else if (direction.Matches(MovementDirection.SOUTH)) {
-                if (direction.Matches(MovementDirection.EAST))
-                    targetEuler = new Vector3(0f, 0f, -135f);
-                else if (direction.Matches(MovementDirection.WEST))
-                    targetEuler = new Vector3(0f, 0f, 135f);
-                else
-                    targetEuler = new Vector3(0f, 0f, -180f);
-            } else if (direction.Matches(MovementDirection.EAST))
-                targetEuler = new Vector3(0f, 0f, -90f);
-            else if (direction.Matches(MovementDirection.WEST)) targetEuler = new Vector3(0f, 0f, 90f);
         }
     }
 }
