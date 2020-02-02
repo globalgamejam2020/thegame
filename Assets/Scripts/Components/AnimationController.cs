@@ -29,6 +29,11 @@ namespace Component {
             animator.SetTrigger("Poop");
         }
 
+        public void Litter()
+        {
+            animator.SetTrigger("Litter");
+        }
+
         public void Rabid() {
             animator.SetTrigger("Rabid");
         }
