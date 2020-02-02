@@ -243,7 +243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HumanPrefab: {fileID: 6931666693586538395, guid: 57673ac60482ec947afc780c8891aca9,
     type: 3}
-  SquirrelPrefab: {fileID: 6931666693586538395, guid: 71aaca27aa42e4092abed65195fa3ca0,
+  SquirrelPrefab: {fileID: 9043418210349096528, guid: 38d040052e0a9438c8d2d22bbabf8f01,
+    type: 3}
+  TreePrefab: {fileID: 5144169378206530978, guid: 00bf92c1e7ba54805b326d5ba18402ba,
     type: 3}
 --- !u!1 &4775963915180975525
 GameObject:

@@ -24,8 +24,6 @@ namespace Player {
             maxX = bounds.xMax - horizontalExtent - 0.5f;
             minY = bounds.yMin + verticalExtent - 0.5f;
             maxY = bounds.yMax - verticalExtent - 0.5f;
-
-            Debug.Log($"Bounds: {bounds}, verticalExtent: {verticalExtent}, horizontalExtent: {horizontalExtent}, minX: {bounds.xMin}, maxX: {bounds.xMax}, minY: {bounds.yMin}, maxY: {bounds.yMax}");
         }
 
         // Update is called once per frame
