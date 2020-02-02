@@ -42,6 +42,21 @@ namespace Component {
             return direction;
         }
 
+        public void Move(Vector2 direction) {
+            MovementDirection movementDirection = 0;
+            
+            if(direction.x > 0)
+                movementDirection += 2;
+            else if(direction.x < 0)
+                movementDirection += 8;
+
+            if(direction.y > 0)
+                movementDirection += 1;
+            else if(direction.y < 0)
+                movementDirection += 4;
+            Move(movementDirection);
+        }
+
         public void Move(MovementDirection direction) {
             if (isMoving()) return;
 
