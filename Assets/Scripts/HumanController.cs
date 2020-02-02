@@ -16,7 +16,7 @@ public class HumanController : MonoBehaviour {
 
     void Start() {
         movement = GetComponent<Movement>();
-
+        animationController = GetComponent<AnimationController>();
         float nextInvoke = Random.Range(1f, 5f);
         Invoke("Litter", nextInvoke);
     }
@@ -71,83 +71,47 @@ public class HumanController : MonoBehaviour {
     }
 
     private void createVisionCone() {
-        GameObject[] verticies = GameObject.FindGameObjectsWithTag("verticies");
-        // sort the intersection points in order of their ray's angle
-        // connect the dots clockwise
 
-        List<UnityEngine.Vector2> visionConeVector2 = new List<UnityEngine.Vector2> {
-            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-alertRadius, alertRadius), new UnityEngine.Vector2(alertRadius, alertRadius)
-        };
+        // UnityEngine.Vector2[] endPoints = new UnityEngine.Vector2[9];
+        // List<UnityEngine.Vector2> visionConeVector2 = new List<UnityEngine.Vector2>();
+        // List<UnityEngine.Vector3> visionConeVector3 = new List<UnityEngine.Vector3>();
+        // List<int> triangles = new List<int>();
 
-        List<UnityEngine.Vector3> visionConeVector3 = new List<UnityEngine.Vector3> {
-            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(-alertRadius, alertRadius, 0), new UnityEngine.Vector3(alertRadius, alertRadius, 0)
-        };
-
-        List<int> triangles = new List<int> { 0, 1, 2 };
-
-        // RaycastHit2D leftHit = Physics2D.Raycast(new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-alertRadius, alertRadius), alertRadius);
-        // if(leftHit.collider != null) {
-        //     Debug.Log("hit");
-        //     visionConeVector2.Add(leftHit.point);
-        //     visionConeVector2.Add(new UnityEngine.Vector2(leftHit.point.x, alertRadius));
-            
-        //     visionConeVector3.Add(leftHit.point);
-        //     visionConeVector3.Add(new UnityEngine.Vector2(leftHit.point.x, alertRadius));
-
-        //     triangles.Add(0);
-        //     triangles.Add(3);
-        //     triangles.Add(1);
+        // for(int i = 0; i < 10; i++) {
+        //     UnityEngine.Vector2 endPoint;
+        //     RaycastHit2D raycast = Physics2D.Raycast(
+        //         new UnityEngine.Vector2(0, 0),
+        //         new UnityEngine.Vector2(alertRadius, alertRadius),
+        //         alertRadius);
+        //         if(raycast.collider != null) {
+        //             endPoint = raycast.point;
+        //         } else {
+        //             endPoint = new UnityEngine.Vector2(0,0);
+        //         }
+        //     endPoints[i] = endPoint;
         // }
-        RaycastHit2D rightHit = Physics2D.Raycast(new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(alertRadius, alertRadius), alertRadius);
-        if(rightHit.collider != null) {
-            Debug.Log("hit");
 
-            // triangles = new List<int> { 0, 1, 2, 0, 2, 3 };
-            triangles = new List<int> { 0, 1, 2};
+        // for(int i = 0; i < 9; i++) {
+        //     visionConeVector2.Add(new UnityEngine.Vector2(0, 0));
+        //     visionConeVector2.Add(endPoints[i]);
+        //     visionConeVector2.Add(endPoints[i+1]);
 
-            visionConeVector2 = new List<UnityEngine.Vector2> {
-                new UnityEngine.Vector2(0, 0),
-                new UnityEngine.Vector2(rightHit.point.x, alertRadius),
-                new UnityEngine.Vector2(rightHit.point.x, rightHit.point.y)
-                
-            };
+        //     visionConeVector3.Add(new UnityEngine.Vector3(0, 0, 0));
+        //     visionConeVector3.Add(new UnityEngine.Vector3(endPoints[i].x, endPoints[i].y, 0));
+        //     visionConeVector3.Add(new UnityEngine.Vector3(endPoints[i+1].x, endPoints[i+1].y, 0));
 
-            visionConeVector3 = new List<UnityEngine.Vector3> {
-                new UnityEngine.Vector3(0, 0, 0),
-                new UnityEngine.Vector3(rightHit.point.x, alertRadius, 0),
-                new UnityEngine.Vector3(rightHit.point.x, rightHit.point.y, 0)
-                
-            };
+        //     triangles.Add();
+        //     triangles.Add();
+        //     triangles.Add();
+        // }
 
-            // visionConeVector2.Add(rightHit.point);
-            // visionConeVector2.Add(new UnityEngine.Vector2(rightHit.point.x, alertRadius));
-
-            // visionConeVector3.Add(rightHit.point);
-            // visionConeVector3.Add(new UnityEngine.Vector2(rightHit.point.x, alertRadius));
-
-            // triangles.Add(0);
-            // triangles.Add(3);
-            // triangles.Add(4);
-
-            // triangles[1] = triangles[4]; //replace what is in pos 1 with what is in pos 4
+        //     MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
+        //     var visionConeMesh = visionCone.mesh;
+        //     visionConeMesh.Clear();
+        //     visionConeMesh.vertices = visionConeVector3.ToArray();
+        //     visionConeMesh.uv = visionConeVector2.ToArray();
+        //     visionConeMesh.RecalculateNormals();
+        //     visionConeMesh.triangles = triangles.ToArray();
         }
-
-        Debug.Log("vision cone");
-        for(int i = 0; i < visionConeVector3.Count; i++) {
-            Debug.Log(visionConeVector3[i]);
-        }
-
-        Debug.Log("triangles");
-        for(int i = 0; i < triangles.Count; i++) {
-            Debug.Log(i + " " + triangles[i] + " " + visionConeVector2[triangles[i]]);
-        }
-
-        MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
-        var visionConeMesh = visionCone.mesh;
-        visionConeMesh.Clear();
-        visionConeMesh.vertices = visionConeVector3.ToArray();
-        visionConeMesh.uv = visionConeVector2.ToArray();
-        visionConeMesh.RecalculateNormals();
-        visionConeMesh.triangles = triangles.ToArray();
     }
 }

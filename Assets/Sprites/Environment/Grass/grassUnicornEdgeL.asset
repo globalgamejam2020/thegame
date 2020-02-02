@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: terrainGrass3
+  m_Name: grassUnicornEdgeL
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: f00ed2b0d81cf443f9695b6dd209ce9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99b3c5583bc5c49ca9ab95773126f4d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

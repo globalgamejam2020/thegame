@@ -51,6 +51,13 @@ namespace Component
 
         public void PlayFX(string key)
         {
+            if (key == "final")
+            {
+                audioSource.clip = finalFX[0];
+                audioSource.Play();
+                return;
+            }
+
             if (moveFXIndexSet.Count == 0) InitHashSet();
             //if (!forcePlay && audioSource.isPlaying) return;
 
