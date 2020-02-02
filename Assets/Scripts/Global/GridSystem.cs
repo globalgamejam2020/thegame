@@ -40,9 +40,9 @@ namespace Global {
             var bounds = GroundBounds();
 
             return position.x < bounds.xMin
-                   || position.x > bounds.xMax
+                   || position.x >= bounds.xMax
                    || position.y < bounds.yMin
-                   || position.y > bounds.yMax;
+                   || position.y >= bounds.yMax;
         }
         
         public BoundsInt GroundBounds() {
