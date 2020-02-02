@@ -17,10 +17,11 @@ public class HumanController : MonoBehaviour {
     }
 
     void Update() {
+        if(patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position) {
+            nextPatrolPointIndex ++;
+        }
         if(!movement.isMoving()) {
             planMovement();
-        } else if(patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position) {
-            nextPatrolPointIndex ++;
         }
     }
 
@@ -34,10 +35,8 @@ public class HumanController : MonoBehaviour {
 
         UnityEngine.Vector3 destination = patrolPoints[nextPatrolPointIndex].transform.position;
 
-        float epsilon = 2.5f;
+        float epsilon = 0.0f;
 
-        Debug.Log("postion " + this.transform.position + "destination " + destination);
-        
         if(destination.y < this.transform.position.y + epsilon) {
             direction |= MovementDirection.SOUTH;
         } else if (destination.y > this.transform.position.y - epsilon) {
@@ -49,6 +48,9 @@ public class HumanController : MonoBehaviour {
         } else if (destination.x > this.transform.position.x - epsilon) {
             direction |= MovementDirection.EAST;
         }
+
+        Debug.Log("postion " + this.transform.position + "destination " + destination + " direction " + direction);
+
         movement.Move(direction);
     }
 }
