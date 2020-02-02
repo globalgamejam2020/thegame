@@ -451,6 +451,9 @@ GameObject:
   m_Component:
   - component: {fileID: 582743763}
   - component: {fileID: 582743762}
+  - component: {fileID: 582743764}
+  - component: {fileID: 582743765}
+  - component: {fileID: 582743766}
   m_Layer: 0
   m_Name: start black
   m_TagString: Untagged
@@ -521,6 +524,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &582743764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582743761}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 0.32}
+    newSize: {x: 0.96, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2}
+  m_EdgeRadius: 0
+--- !u!114 &582743765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582743761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96273ebc835042b699df44213b74a8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &582743766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582743761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f754f84eabc4a228d132f34a2564973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: SceneLevel2
 --- !u!1001 &608966599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14787,7 +14841,7 @@ PrefabInstance:
     - target: {fileID: 4715771084370951717, guid: c5de17f20ad10414d96b0a67980714c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4715771084370951717, guid: c5de17f20ad10414d96b0a67980714c6,
         type: 3}
