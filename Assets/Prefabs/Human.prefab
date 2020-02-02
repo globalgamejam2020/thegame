@@ -254,9 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f5b5eac48c9b9498c8923af7eaeec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  patrolPoints: []
   nextPatrolPointIndex: 0
   alertRadius: 10
   movement: {fileID: 8592110019382987623}
