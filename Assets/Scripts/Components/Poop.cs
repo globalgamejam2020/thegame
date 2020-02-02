@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Data;
 using UnityEngine;
 
 namespace Component
@@ -7,35 +8,37 @@ namespace Component
     public class Poop : MonoBehaviour
     {
         [SerializeField] private GameObject poop;
-        private Vector3 position;
         [SerializeField] private int effectRadius;
 
         private Sprite[] poopSprites = new Sprite[3];
         private SpriteRenderer spriteRenderer;
 
+        private Vector3 finalPosition;
+        private bool moving = true;
         private int animationFrame = 0;
 
-        public Poop(Vector3 position)
-        {
+        public Poop(Vector3 initial, Vector3 position) {
+            position.z = -2f;
+            initial.z = -2f;
             LoadSprites();
 
-            this.position = position;
+            this.finalPosition = position;
             int maxPoopSize = Random.Range(0, 3);
             effectRadius = maxPoopSize;
 
             poop = Resources.Load<GameObject>("GameObjects/poop");
-            GameObject poopInstance = Instantiate(poop, position, Quaternion.identity);
-            poopInstance.transform.position = new Vector3(poopInstance.transform.position.x, poopInstance.transform.position.y, -2f); //for camera z-depth issues
+            GameObject poopInstance = Instantiate(poop, initial, Quaternion.identity);
             Poop poopComponent = poopInstance.AddComponent<Poop>();
-            SetPoopComponent(poopComponent);
+            SetPoopComponent(poopComponent, position);
         }
 
-        private void SetPoopComponent(Poop poo)
+        private void SetPoopComponent(Poop poo, Vector3 finalPosition)
         {
             poo.effectRadius = this.effectRadius;
             poo.spriteRenderer = poo.GetComponent<SpriteRenderer>();
             poo.poopSprites = this.poopSprites;
-            poo.position = this.position;
+            poo.finalPosition = finalPosition;
+            poo.moving = true;
             poo.InvokeRepeating("AnimatePoop", 0f, 0.15f);
         }
 
@@ -56,9 +59,23 @@ namespace Component
         }
 
         // Update is called once per frame
-        void Update()
-        {
+        void Update() {
+            Debug.Log($"IsMoving: {IsMoving()}, final: {finalPosition}, position: {transform.position}");
+            if (IsMoving()) Move();
             //tree radius growing code
+        }
+
+        private void Move() {
+            transform.position = Vector3.Lerp(transform.position, finalPosition, 10 * Time.deltaTime);
+            var distanceRemaining = (finalPosition - transform.position).sqrMagnitude;
+            if (distanceRemaining < 0.01f) {
+                moving = false;
+                transform.position = finalPosition;
+            }
+        }
+
+        private bool IsMoving() {
+            return moving;
         }
     }
 }

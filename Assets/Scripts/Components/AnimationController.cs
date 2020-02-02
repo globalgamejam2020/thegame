@@ -24,7 +24,7 @@ namespace Component {
         }
 
         public void Poop() {
-            if (movement.isMoving()) return;
+            // if (movement.isMoving()) return;
 
             animator.SetTrigger("Poop");
         }
@@ -38,8 +38,12 @@ namespace Component {
         }
 
         public void DropPoop() {
-            new Poop(transform.position - transform.up * 0.7f);
-            Debug.Log("POOP");
+            // new Poop(transform.position - transform.up * 0.7f);
+            new Poop(transform.position - transform.up * 0.7f, Round(transform.position - transform.up));
+        }
+
+        private Vector3 Round(Vector3 v) {
+            return new Vector3( Mathf.Round(v.x), Mathf.Round(v.y), Mathf.Round(v.z));
         }
 
         public void SetTurnDirection(float turnDirection) {
