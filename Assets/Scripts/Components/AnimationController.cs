@@ -2,21 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Data;
+using Player;
 
 namespace Component {
     public class AnimationController : MonoBehaviour {
+        private CameraShake shake;
         private Movement movement;
         private Animator animator;
 
         // Start is called before the first frame update
         void Start() {
+            
             movement = GetComponent<Movement>();
             animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
         void Update() {
-            if (movement.isMoving()) animator.SetTrigger("Walking");
+            if (movement.isMoving()) {
+                animator.SetTrigger("Walking");
+            } else {
+                animator.SetTrigger("Idle");
+            }
         }
 
         public void Turning(bool turning) {
@@ -24,8 +31,6 @@ namespace Component {
         }
 
         public void Poop() {
-            // if (movement.isMoving()) return;
-
             animator.SetTrigger("Poop");
         }
 
