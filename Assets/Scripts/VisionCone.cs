@@ -43,8 +43,9 @@ public class VisionCone : MonoBehaviour
         //unicorn.GetComponent<Movement>().TurnTo(transform);
         unicorn.GetComponent<Player.Player>().enabled = false;
         unicorn.GetComponent<AudioController>().PlayFX("final");
-        Destroy(unicorn.GetComponent<AudioController>());
         Debug.LogWarning("GAME IS OVER!");
+
+        Global.Music.instance.GameOver();
 
         Destroy(this);
     }

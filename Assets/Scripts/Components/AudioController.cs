@@ -53,8 +53,7 @@ namespace Component
         {
             if (key == "final")
             {
-                audioSource.clip = finalFX[0];
-                audioSource.Play();
+                Invoke("LatePlayFinal", 4.5f);
                 return;
             }
 
@@ -64,6 +63,12 @@ namespace Component
             int rand = Random.Range(0, moveFX.Count);
             int index = PickFromHashSet(rand);
             audioSource.clip = FX_dict[key][index];
+            audioSource.Play();
+        }
+
+        private void LatePlayFinal()
+        {
+            audioSource.clip = finalFX[0];
             audioSource.Play();
         }
     }
