@@ -17,13 +17,17 @@ public class HumanController : MonoBehaviour {
     }
 
     void Update() {
-        if (patrolPoints.Length == 0) return;
-        if(patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position) {
-            nextPatrolPointIndex ++;
+        if(patrolPoints.Length != 0) {
+            if(patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position) {
+                nextPatrolPointIndex ++;
+            }
         }
+
         if(!movement.isMoving()) {
             planMovement();
         }
+
+        createVisionCone();
     }
 
     void planMovement() {
@@ -50,8 +54,24 @@ public class HumanController : MonoBehaviour {
             direction |= MovementDirection.EAST;
         }
 
-        Debug.Log("postion " + this.transform.position + "destination " + destination + " direction " + direction);
-
         movement.Move(direction);
+    }
+
+    private void createVisionCone() {
+        // Raycast leftEdge = Physics2D.Raycast();
+        // UnityEngine.Vector3[] verticies = new UnityEngine.Vector3[] {
+            
+        // };
+
+        // MeshFilter visionCone = this.GetComponent<MeshFilter>();
+        // var visionConeMesh = visionCone.GetComponent<MeshFilter>().mesh;
+        // visionConeMesh.Clear();
+        // visionConeMesh.uv = new UnityEngine.Vector2[] {
+        //     new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(0, 2f), new UnityEngine.Vector2(2f, 2f)
+        // };
+        // visionConeMesh.vertices = new UnityEngine.Vector3[] {
+        //     new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(0, 2f, 0), new UnityEngine.Vector3(2f, 2f, 0)
+        // };
+        // visionConeMesh.triangles = new int[] { 0, 1, 2 };
     }
 }
