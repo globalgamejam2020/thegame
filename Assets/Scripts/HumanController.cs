@@ -12,9 +12,21 @@ public class HumanController : MonoBehaviour {
     [SerializeField] private int nextPatrolPointIndex = 0;
     [SerializeField] private float alertRadius = 10;
     [SerializeField] private Movement movement;
+    private AnimationController animationController;
 
     void Start() {
         movement = GetComponent<Movement>();
+
+        float nextInvoke = Random.Range(1f, 5f);
+        Invoke("Litter", nextInvoke);
+    }
+
+    private void Litter()
+    {
+        animationController.Litter();
+
+        float nextInvoke = Random.Range(1f, 5f);
+        Invoke("Litter", nextInvoke);
     }
 
     void Update() {

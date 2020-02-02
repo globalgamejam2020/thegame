@@ -68,20 +68,15 @@ namespace Global {
         }
 
         private ObjectType? GetType([CanBeNull] String name) {
-            switch (name) {
-                case "Tree":
-                    return ObjectType.TREE;
-                case "Grass":
-                    return ObjectType.GRASS;
-                case "Water":
-                    return ObjectType.WATER;
-                case "Building":
-                    return ObjectType.BUILDING;
-                case "Pavement":
-                    return ObjectType.PAVEMENT;
-                default:
-                    return null;
-            }
+            if (ReferenceEquals(name, null)) return null;
+
+            if (name.StartsWith("bldg")) return ObjectType.BUILDING;
+            if (name.StartsWith("grass")) return ObjectType.GRASS;
+            if (name.StartsWith("water")) return ObjectType.WATER;
+            if (name.StartsWith("pvmt")) return ObjectType.PAVEMENT;
+            if (name.StartsWith("tree")) return ObjectType.TREE;
+
+            return null;
         }
 
         private void PlaceCharacterPrefab(TileBase tile, Vector3Int position) {

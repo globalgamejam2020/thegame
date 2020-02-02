@@ -2,12 +2,10 @@
 using Data;
 using Global;
 using UnityEngine;
-using Random = System.Random;
 
 namespace Component {
     public class Movement : MonoBehaviour {
         [SerializeField] private float Speed;
-        [SerializeField] private float Size;
 
         private Vector3 origin = Vector3.zero;
         private Vector3 destination = Vector3.zero;
@@ -30,11 +28,6 @@ namespace Component {
 
                 Move();
             }
-        }
-
-        public void CanMove(int canMove) {
-            //cuz Unity AnimationEvent dont accept bool param
-            enabled = Convert.ToBoolean(canMove);
         }
 
         private void Move() {
@@ -106,21 +99,13 @@ namespace Component {
                 destination.x += -1f;
                 angles.z = 90 * angleMultiplier;
             }
-            
+
             targetEuler = angles;
 
-            var upSize = destination + UpSize(direction);
-            // Debug.Log($"upsize: {upSize}");
-            
-            if (!GridSystem.Instance.AllowsMovement(destination)
-                || !GridSystem.Instance.AllowsMovement(upSize)) {
+            if (!GridSystem.Instance.AllowsMovement(destination)) {
                 destination = origin;
                 this.direction = 0;
             }
-        }
-
-        private Vector3 UpSize(MovementDirection direction) {
-            return direction.Up() * Size;
         }
     }
 }

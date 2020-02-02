@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 6107852907059621785}
   - component: {fileID: -1380513342813169499}
   - component: {fileID: 8592110019382987623}
+  - component: {fileID: 4977930595691336517}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -176,7 +177,7 @@ MonoBehaviour:
   patrolPoints: []
   nextPatrolPointIndex: 0
   alertRadius: 10
-  movement: {fileID: 0}
+  movement: {fileID: 8592110019382987623}
 --- !u!114 &8592110019382987623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +192,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 2
   Size: 0
+--- !u!95 &4977930595691336517
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931666693586538395}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8bef8b68cb5f5746b5b3b8a5437e988, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
