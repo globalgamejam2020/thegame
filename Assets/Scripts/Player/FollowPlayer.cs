@@ -20,12 +20,12 @@ namespace Player {
             var verticalExtent = Camera.main.orthographicSize;
             var horizontalExtent = verticalExtent * Screen.width / Screen.height;
 
-            minX = (horizontalExtent - bounds.size.x) / 2f + bounds.xMin;
-            maxX = bounds.size.x / 2f - horizontalExtent - bounds.xMin;
-            minY = verticalExtent - bounds.size.y / 2f + bounds.yMin;
-            maxY = bounds.size.y / 2f - verticalExtent - bounds.yMin;
+            minX = bounds.xMin + horizontalExtent - 0.5f;
+            maxX = bounds.xMax - horizontalExtent - 0.5f;
+            minY = bounds.yMin + verticalExtent - 0.5f;
+            maxY = bounds.yMax - verticalExtent - 0.5f;
 
-            Debug.Log($"Bounds: {bounds}, verticalExtent: {verticalExtent}, horizontalExtent: {horizontalExtent}, minX: {minX}, maxX: {maxX}, minY: {minY}, maxY: {maxY}");
+            Debug.Log($"Bounds: {bounds}, verticalExtent: {verticalExtent}, horizontalExtent: {horizontalExtent}, minX: {bounds.xMin}, maxX: {bounds.xMax}, minY: {bounds.yMin}, maxY: {bounds.yMax}");
         }
 
         // Update is called once per frame

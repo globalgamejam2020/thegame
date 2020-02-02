@@ -10,17 +10,49 @@ namespace Component
         private Vector3 position;
         [SerializeField] private int effectRadius;
 
+        private Sprite[] poopSprites = new Sprite[3];
+        private SpriteRenderer spriteRenderer;
+
+        private int animationFrame = 0;
+
         public Poop(Vector3 position)
         {
-            this.position = position;
-            int poopSize = Random.Range(1, 4);
-            effectRadius = poopSize;
+            LoadSprites();
 
-            poop = Resources.Load<GameObject>("GameObjects/poop"+poopSize);
+            this.position = position;
+            int maxPoopSize = Random.Range(0, 3);
+            effectRadius = maxPoopSize;
+
+            poop = Resources.Load<GameObject>("GameObjects/poop");
             GameObject poopInstance = Instantiate(poop, position, Quaternion.identity);
-            poopInstance.transform.position = new Vector3(poopInstance.transform.position.x, poopInstance.transform.position.y, -2f);
+            poopInstance.transform.position = new Vector3(poopInstance.transform.position.x, poopInstance.transform.position.y, -2f); //for camera z-depth issues
             Poop poopComponent = poopInstance.AddComponent<Poop>();
-            poopComponent = this;
+            SetPoopComponent(poopComponent);
+        }
+
+        private void SetPoopComponent(Poop poo)
+        {
+            poo.effectRadius = this.effectRadius;
+            poo.spriteRenderer = poo.GetComponent<SpriteRenderer>();
+            poo.poopSprites = this.poopSprites;
+            poo.position = this.position;
+            poo.InvokeRepeating("AnimatePoop", 0f, 0.15f);
+        }
+
+        private void LoadSprites()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                poopSprites[i] = Resources.Load<Sprite>("Sprites/poop" + i);
+            }
+        }
+
+        private void AnimatePoop()
+        {
+            if (animationFrame > effectRadius) { CancelInvoke(); return; }
+
+            spriteRenderer.sprite = poopSprites[animationFrame];
+            animationFrame++;
         }
 
         // Update is called once per frame
