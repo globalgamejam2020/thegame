@@ -30,6 +30,8 @@ namespace Component
         void Update()
         {
             if (rabid && !IsInvoking("Attack")) Invoke("Attack", 0f);
+
+            
         }
 
         private void MoveRandom()
