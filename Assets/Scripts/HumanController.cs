@@ -17,6 +17,7 @@ public class HumanController : MonoBehaviour {
     }
 
     void Update() {
+        if (patrolPoints.Length == 0) return;
         if(patrolPoints[nextPatrolPointIndex].transform.position == this.transform.position) {
             nextPatrolPointIndex ++;
         }

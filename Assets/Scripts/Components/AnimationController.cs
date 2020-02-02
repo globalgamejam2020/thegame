@@ -39,7 +39,7 @@ namespace Component {
 
         public void DropPoop()
         {
-            new Poop(transform.position);
+            new Poop(transform.position - transform.up * 0.7f);
             Debug.Log("POOP");
         }
 
