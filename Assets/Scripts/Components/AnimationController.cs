@@ -59,5 +59,11 @@ namespace Component {
         public void SetTurnDirection(float turnDirection) {
             animator.SetFloat("TurnDirection", turnDirection);
         }
+
+        public void HORSE()
+        {
+            animator.SetTrigger("HORSE");
+            this.enabled = false;
+        }
     }
 }

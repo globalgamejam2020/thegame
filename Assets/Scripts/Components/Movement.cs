@@ -30,6 +30,18 @@ namespace Component {
             }
         }
 
+        public void TurnTo(Transform turnTo)
+        {
+            targetEuler = turnTo.position - transform.position;
+            Rotate();
+        }
+
+        private void Rotate()
+        {
+            transform.up = Vector3.Lerp(transform.up, targetEuler, Time.deltaTime);
+            Invoke("Rotate", 0.01f);
+        }
+
         private void Move() {
             var distanceToMove = DistanceToMove();
             transform.Translate(distanceToMove, Space.World);
@@ -59,12 +71,18 @@ namespace Component {
             return distanceToMove;
         }
 
-        private void StopMovement() {
+        public void StopMovement() {
             direction = 0;
             targetEuler = Vector3.zero;
             transform.position = destination;
             origin = destination;
             previousDistanceRemaining = 2;
+        }
+
+        public void ForceStop()
+        {
+            direction = 0;
+            targetEuler = Vector3.zero;
         }
 
         public bool isMoving() {

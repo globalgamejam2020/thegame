@@ -16,7 +16,7 @@ public class HumanController : MonoBehaviour {
 
     void Start() {
         movement = GetComponent<Movement>();
-
+        animationController = GetComponent<AnimationController>();
         float nextInvoke = Random.Range(1f, 5f);
         Invoke("Litter", nextInvoke);
     }
@@ -100,7 +100,7 @@ public class HumanController : MonoBehaviour {
         // }
         RaycastHit2D rightHit = Physics2D.Raycast(new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(alertRadius, alertRadius), alertRadius);
         if(rightHit.collider != null) {
-            Debug.Log("hit");
+            //Debug.Log("hit");
 
             // triangles = new List<int> { 0, 1, 2, 0, 2, 3 };
             triangles = new List<int> { 0, 1, 2};
@@ -130,16 +130,6 @@ public class HumanController : MonoBehaviour {
             // triangles.Add(4);
 
             // triangles[1] = triangles[4]; //replace what is in pos 1 with what is in pos 4
-        }
-
-        Debug.Log("vision cone");
-        for(int i = 0; i < visionConeVector3.Count; i++) {
-            Debug.Log(visionConeVector3[i]);
-        }
-
-        Debug.Log("triangles");
-        for(int i = 0; i < triangles.Count; i++) {
-            Debug.Log(i + " " + triangles[i] + " " + visionConeVector2[triangles[i]]);
         }
 
         MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
