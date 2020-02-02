@@ -113,3 +113,4 @@ public class HumanController : MonoBehaviour {
         //     visionConeMesh.RecalculateNormals();
         //     visionConeMesh.triangles = triangles.ToArray();
     }
+}

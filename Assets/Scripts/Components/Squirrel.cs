@@ -13,12 +13,14 @@ namespace Component {
 
         private Movement movement;
         private AnimationController animationController;
+        private Animator animator;
         private AudioController audioController;
 
         void Start() {
             movement = GetComponent<Movement>();
             animationController = GetComponent<AnimationController>();
             audioController = GetComponent<AudioController>();
+            animator = GetComponent<Animator>();
 
             float rabidInvoke = Random.Range(10f, 20f);
             Invoke("MakeRabid", rabidInvoke);
@@ -90,8 +92,13 @@ namespace Component {
                 distance = d;
             }
 
-            if (closest == null || distance < 1f) return null;
-            return closest.transform.position;
+            if (closest == null || distance < 1f) {
+                animator.SetBool("InTree", true);
+                return null;
+            } else {
+                animator.SetBool("InTree", false);
+                return closest.transform.position;
+            }
         }
 
         private (GameObject, float) FindClosestTree(RaycastHit2D[] hits) {
