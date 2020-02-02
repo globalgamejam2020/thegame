@@ -62,7 +62,9 @@ namespace Component {
                 Destroy(this, 2.0f);
                 GameObject tree = Resources.Load<GameObject>("GameObjects/Tree");
                 Debug.Log(tree);
-                Instantiate(tree, this.finalPosition, Quaternion.identity);
+                GameObject treeInstance = Instantiate(tree, this.finalPosition, Quaternion.identity);
+                TreeController treeInstanceTree = treeInstance.GetComponent<TreeController>();
+                treeInstanceTree.PlantTree(effectRadius);
                 shouldUpdate = false;
             }
         }
