@@ -9,17 +9,18 @@ public class HumanController : MonoBehaviour {
     [SerializeField] private Vector2[] patrolPoints;
     [SerializeField] private float alertRadius = 10;
     [SerializeField] private Movement movement;
-    bool canMove = true;
 
     void Start() {
         movement = GetComponent<Movement>();
     }
 
     void Update() {
-        if(!movement.isMoving() && canMove) {
-            Debug.Log("human moving");
-            canMove = false;
-            movement.Move(Data.MovementDirection.NORTH);
+        if(!movement.isMoving()) {
+            planMovement();
         }
+    }
+
+    void planMovement() {
+        
     }
 }
