@@ -1,5 +1,4 @@
-﻿using System;
-using Data;
+﻿using Data;
 using Global;
 using UnityEngine;
 
@@ -93,8 +92,8 @@ namespace Component {
             return direction;
         }
 
-        public void Move(MovementDirection direction) {
-            if (isMoving()) return;
+        public bool Move(MovementDirection direction) {
+            if (isMoving()) return false;
 
             var angles = Vector3.zero;
             this.direction = direction;
@@ -123,7 +122,10 @@ namespace Component {
             if (!GridSystem.Instance.AllowsMovement(destination)) {
                 destination = origin;
                 this.direction = 0;
+                return false;
             }
+
+            return true;
         }
     }
 }

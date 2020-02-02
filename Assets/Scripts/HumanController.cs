@@ -72,5 +72,45 @@ public class HumanController : MonoBehaviour {
 
     private void createVisionCone() {
 
+        // UnityEngine.Vector2[] endPoints = new UnityEngine.Vector2[9];
+        // List<UnityEngine.Vector2> visionConeVector2 = new List<UnityEngine.Vector2>();
+        // List<UnityEngine.Vector3> visionConeVector3 = new List<UnityEngine.Vector3>();
+        // List<int> triangles = new List<int>();
+
+        // for(int i = 0; i < 10; i++) {
+        //     UnityEngine.Vector2 endPoint;
+        //     RaycastHit2D raycast = Physics2D.Raycast(
+        //         new UnityEngine.Vector2(0, 0),
+        //         new UnityEngine.Vector2(alertRadius, alertRadius),
+        //         alertRadius);
+        //         if(raycast.collider != null) {
+        //             endPoint = raycast.point;
+        //         } else {
+        //             endPoint = new UnityEngine.Vector2(0,0);
+        //         }
+        //     endPoints[i] = endPoint;
+        // }
+
+        // for(int i = 0; i < 9; i++) {
+        //     visionConeVector2.Add(new UnityEngine.Vector2(0, 0));
+        //     visionConeVector2.Add(endPoints[i]);
+        //     visionConeVector2.Add(endPoints[i+1]);
+
+        //     visionConeVector3.Add(new UnityEngine.Vector3(0, 0, 0));
+        //     visionConeVector3.Add(new UnityEngine.Vector3(endPoints[i].x, endPoints[i].y, 0));
+        //     visionConeVector3.Add(new UnityEngine.Vector3(endPoints[i+1].x, endPoints[i+1].y, 0));
+
+        //     triangles.Add();
+        //     triangles.Add();
+        //     triangles.Add();
+        // }
+
+        //     MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
+        //     var visionConeMesh = visionCone.mesh;
+        //     visionConeMesh.Clear();
+        //     visionConeMesh.vertices = visionConeVector3.ToArray();
+        //     visionConeMesh.uv = visionConeVector2.ToArray();
+        //     visionConeMesh.RecalculateNormals();
+        //     visionConeMesh.triangles = triangles.ToArray();
     }
 }
