@@ -9,7 +9,7 @@ namespace Player {
 
         private Movement movement;
         private AnimationController animationController;
-
+        
         private void Start() {
             this.movement = GetComponent<Movement>();
             animationController = GetComponent<AnimationController>();
@@ -28,7 +28,7 @@ namespace Player {
 
             movement.Move(direction);
 
-            if (Input.GetKeyDown(KeyCode.Space)) { Debug.Log("should poop"); animationController.Poop(); }
+            if (Input.GetKeyDown(KeyCode.Space)) { animationController.Poop(); }
         }
     }
 }

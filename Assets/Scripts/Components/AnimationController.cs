@@ -5,10 +5,6 @@ using Data;
 
 namespace Component {
     public class AnimationController : MonoBehaviour {
-        [SerializeField] private GameObject smallPooPrefab;
-        [SerializeField] private GameObject mediumPooPrefab;
-        [SerializeField] private GameObject bigPooPrefab;
-
         private Movement movement;
         private Animator animator;
 
