@@ -24,7 +24,7 @@ namespace Component {
         private void Move() {
             float distance = Speed * Time.deltaTime;
             transform.Translate(distance * (destination - origin));
-            var closeEnough = (destination - transform.position).sqrMagnitude < 0.1f;
+            var closeEnough = (destination - transform.position).sqrMagnitude < 0.01f;
             if (closeEnough) StopMovement();
         }
 
