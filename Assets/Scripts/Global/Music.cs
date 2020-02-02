@@ -23,7 +23,8 @@ namespace Global
             float pitch = Random.Range(0.9f, 1.1f);
 
             audioSource = GetComponent<AudioSource>();
-            audioSource.volume = 0.6f;
+            audioSource.loop = true;
+            audioSource.volume = 0.4f;
             audioSource.pitch = pitch;
             audioSource.clip = music[rand];
             audioSource.Play();
@@ -32,6 +33,7 @@ namespace Global
         public void GameOver()
         {
             audioSource.Stop();
+            audioSource.loop = false;
             Invoke("UhWhat", 2f);
             Invoke("DeathMusic", 6f);
         }
@@ -45,7 +47,7 @@ namespace Global
 
         private void DeathMusic()
         {
-            audioSource.volume = 0.7f;
+            audioSource.volume = 0.5f;
             audioSource.clip = deathMusic;
             audioSource.Play();
         }
