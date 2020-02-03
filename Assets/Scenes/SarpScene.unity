@@ -838,6 +838,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1363747222, guid: 38d040052e0a9438c8d2d22bbabf8f01, type: 3}
+      propertyPath: MaxDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1363747222, guid: 38d040052e0a9438c8d2d22bbabf8f01, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1363747222, guid: 38d040052e0a9438c8d2d22bbabf8f01, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9043418210349096528, guid: 38d040052e0a9438c8d2d22bbabf8f01,
         type: 3}
       propertyPath: m_Name
@@ -976,6 +988,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1380513342813169499, guid: 57673ac60482ec947afc780c8891aca9,
+        type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -1380513342813169499, guid: 57673ac60482ec947afc780c8891aca9,
         type: 3}
       propertyPath: patrolPoints.Array.data[0]
