@@ -53,7 +53,7 @@ namespace Component
         {
             if (key == "final")
             {
-                Invoke("LatePlayFinal", 4.5f);
+                Invoke("LatePlayFinal", 4.2f);
                 return;
             }
 
