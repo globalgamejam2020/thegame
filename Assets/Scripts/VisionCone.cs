@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using Component;
 using Player;
+using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine.SceneManagement;
 
-public class VisionCone : MonoBehaviour
-{
+public class VisionCone : MonoBehaviour {
     public LayerMask transparentFX;
     private Movement movement;
 
-    private void Start()
-    {
+    private void Start() {
         movement = transform.parent.GetComponent<Movement>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Player") {
             Debug.Log("Detected UNICORN!");
             if (LineOfSight(collision.gameObject)) GameOver(collision.gameObject);
         }
     }
 
-    private bool LineOfSight(GameObject collision)
-    {
+    private bool LineOfSight(GameObject collision) {
         Vector2 rayDirection = collision.transform.position - transform.position;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, 5f, ~transparentFX);
-        if (hit.collider.tag == "Player") return true;
-        else { Debug.Log("blocked by: " + hit.collider.name); return false; }
+        if (hit.collider.tag == "Player")
+            return true;
+        else {
+            Debug.Log("blocked by: " + hit.collider.name);
+            return false;
+        }
     }
 
-    public void GameOver(GameObject unicorn)
-    {
+    public void GameOver(GameObject unicorn) {
         Destroy(transform.parent.GetComponent<HumanController>());
         movement.ForceStop();
         movement.TurnTo(unicorn.transform);
@@ -47,6 +47,10 @@ public class VisionCone : MonoBehaviour
 
         Global.Music.instance.GameOver();
 
-        Destroy(this);
+        Invoke("LoadIntroScene", 12f);
+    }
+
+    public void LoadIntroScene() {
+        SceneManager.LoadScene("Intro scene");
     }
 }
