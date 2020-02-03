@@ -22,8 +22,8 @@ namespace Component {
             audioController = GetComponent<AudioController>();
             animator = GetComponent<Animator>();
 
-            float rabidInvoke = Random.Range(10f, 20f);
-            Invoke("MakeRabid", rabidInvoke);
+            // float rabidInvoke = Random.Range(10f, 20f);
+            // Invoke("MakeRabid", rabidInvoke);
             Invoke("MoveRandom", 2f);
         }
 
@@ -72,7 +72,7 @@ namespace Component {
                 direction |= MovementDirection.EAST;
             else if (position.x > treePosition.x) direction |= MovementDirection.WEST;
 
-            Debug.Log($"Found tree! Will move to it: {direction}, {treePosition}, {position}");
+            // Debug.Log($"Found tree! Will move to it: {direction}, {treePosition}, {position}");
 
             return direction;
         }
