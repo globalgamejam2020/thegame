@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Campaign : MonoBehaviour
-{
+public class Campaign : MonoBehaviour {
   private AudioSource audioSource;
   public List<AudioClip> clips;
   public List<GameObject> scenes;
   public GameObject currentScene;
   private int currIndex = 0;
   public float timeUntilNextAudio;
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = clips[0];
         audioSource.Play();
@@ -22,13 +19,13 @@ public class Campaign : MonoBehaviour
         }
     }
 
-    void Update(){
+    void Update() {
       if (Input.GetKeyDown(KeyCode.Space)){
         Next();
       }
     }
 
-    public void Next(){
+    public void Next() {
       scenes[currIndex].SetActive(false);
       scenes[currIndex].SetActive(true);
       currIndex++;
