@@ -14,7 +14,7 @@ public class Campaign : MonoBehaviour {
         audioSource.clip = clips[0];
         audioSource.Play();
         scenes[0].SetActive(true);
-        for (int i = 1; i < scenes.Count; i++){
+        for (int i = 1; i < scenes.Count; i++) {
           scenes[i].SetActive(false);
         }
     }
