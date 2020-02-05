@@ -71,17 +71,24 @@ public class HumanController : MonoBehaviour {
 
     private void createVisionCone() {
 
-        MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();  
-        var visionConeMesh = visionCone.mesh;                               
-        visionConeMesh.Clear();                                             
-        visionConeMesh.uv = new UnityEngine.Vector2[] {                     
-            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f),
- new UnityEngine.Vector2(2f, 2f)                                            
-        };                                                                  
-        visionConeMesh.vertices = new UnityEngine.Vector3[] {               
-            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(-2f, 2f, 0), new UnityEngine.Vector3(2f, 2f, 0)                                   
-        };                                                                  
-        visionConeMesh.triangles = new int[] { 0, 1, 2 };                   
+        UnityEngine.Vector2[] vertices2D = new UnityEngine.Vector2[] {
+            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f), new UnityEngine.Vector2(2f, 2f)                                            
+        };
+
+        UnityEngine.Vector3[] vertices3D = new UnityEngine.Vector3[vertices2D.Length];
+        for (int i = 0; i < vertices3D.Length; i++) {
+            vertices3D[i] = new UnityEngine.Vector3(vertices2D[i].x, vertices2D[i].y, 0);
+        }
+
+        Triangulator triangulator = new Triangulator(vertices2D);
+        int[] indices = triangulator.Triangulate();
+
+        MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
+        var visionConeMesh = visionCone.mesh;
+        visionConeMesh.Clear();
+        visionConeMesh.vertices = vertices3D;
+        visionConeMesh.uv = vertices2D;
+        visionConeMesh.triangles = indices;
 
     }
   }
