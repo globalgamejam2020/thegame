@@ -71,51 +71,17 @@ public class HumanController : MonoBehaviour {
 
     private void createVisionCone() {
 
-        List<UnityEngine.Vector2> endPoints = new List<UnityEngine.Vector2>();
-
-        GameObject[] vertices = GameObject.FindGameObjectsWithTag("verticies");
-
-        foreach(GameObject vertex in vertices) {
-            RaycastHit2D raycast = Physics2D.Raycast(
-                // new UnityEngine.Vector2(this.transform.position.x, this.transform.position.y),
-                new UnityEngine.Vector2(0, 0),
-                new UnityEngine.Vector2(vertex.transform.position.x, vertex.transform.position.y),
-                alertRadius);
-                if(raycast.collider != null) {
-                    endPoints.Add(new UnityEngine.Vector2(0, 0));
-                    endPoints.Add(raycast.point);
-                }
-        }
-
-        endPoints.Reverse();
-
-        UnityEngine.Vector2[] vertices2 = endPoints.ToArray();
-
-        Triangulator triangulator = new Triangulator(endPoints.ToArray());
-        int[] indices = triangulator.Triangulate();
- 
-        UnityEngine.Vector3[] vertices3 = new UnityEngine.Vector3[vertices2.Length];
-        for (int i = 0; i < vertices3.Length; i++) {
-            vertices3[i] = new UnityEngine.Vector3(vertices2[i].x, vertices2[i].y, 0);
-        }
- 
-        MeshFilter meshFilter = this.GetComponentInChildren<MeshFilter>();
-        Mesh mesh = meshFilter.mesh;
-
-        Debug.Log(vertices3[0]);
-
-        mesh.Clear();
-
-        mesh.vertices = vertices3;
-        mesh.uv = vertices2;
-        mesh.triangles = indices;
-        
-        mesh.RecalculateNormals();
-        mesh.RecalculateBounds();
-
-        for(int i = 0; i < vertices2.Length; i++) {
-            Debug.Log(vertices2[i]);
-        }
+        MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();  
+        var visionConeMesh = visionCone.mesh;                               
+        visionConeMesh.Clear();                                             
+        visionConeMesh.uv = new UnityEngine.Vector2[] {                     
+            new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f),
+ new UnityEngine.Vector2(2f, 2f)                                            
+        };                                                                  
+        visionConeMesh.vertices = new UnityEngine.Vector3[] {               
+            new UnityEngine.Vector3(0, 0, 0), new UnityEngine.Vector3(-2f, 2f, 0), new UnityEngine.Vector3(2f, 2f, 0)                                   
+        };                                                                  
+        visionConeMesh.triangles = new int[] { 0, 1, 2 };                   
 
     }
   }
