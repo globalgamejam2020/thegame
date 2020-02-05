@@ -142,6 +142,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1092146554}
+    - target: {fileID: 6037590284825453414, guid: 57673ac60482ec947afc780c8891aca9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6136179706403961190, guid: 57673ac60482ec947afc780c8891aca9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -654,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: SceneLevel2
---- !u!1001 &608966599
+--- !u!1001 &793395428
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -664,12 +669,12 @@ PrefabInstance:
     - target: {fileID: 7147681230324171491, guid: 26f3e72c5b5404916a744c7622a96825,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7147681230324171491, guid: 26f3e72c5b5404916a744c7622a96825,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7147681230324171491, guid: 26f3e72c5b5404916a744c7622a96825,
         type: 3}

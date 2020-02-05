@@ -72,7 +72,7 @@ namespace Component {
                 direction |= MovementDirection.EAST;
             else if (position.x > treePosition.x) direction |= MovementDirection.WEST;
 
-            Debug.Log($"Found tree! Will move to it: {direction}, {treePosition}, {position}");
+            // Debug.Log($"Found tree! Will move to it: {direction}, {treePosition}, {position}");
 
             return direction;
         }
@@ -93,10 +93,10 @@ namespace Component {
             }
 
             if (closest == null || distance < 1f) {
-                animator.SetBool("InTree", true);
+                // animator.SetBool("InTree", true);
                 return null;
             } else {
-                animator.SetBool("InTree", false);
+                // animator.SetBool("InTree", false);
                 return closest.transform.position;
             }
         }
