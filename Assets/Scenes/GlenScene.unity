@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493574693}
   - component: {fileID: 493574694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,6 +327,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 823470211263405242, guid: cad0a6f8dd59a2f4b885a5389c68157e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196256642686973320, guid: cad0a6f8dd59a2f4b885a5389c68157e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201561472414000915, guid: cad0a6f8dd59a2f4b885a5389c68157e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3004754917727201007, guid: cad0a6f8dd59a2f4b885a5389c68157e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,6 +402,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 7638733051712558775, guid: cad0a6f8dd59a2f4b885a5389c68157e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081459076592996214, guid: cad0a6f8dd59a2f4b885a5389c68157e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad0a6f8dd59a2f4b885a5389c68157e, type: 3}
 --- !u!1001 &1024411207
@@ -416,6 +441,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[2]
       value: 
       objectReference: {fileID: 818398937}
+    - target: {fileID: 4621444282110782741, guid: 57673ac60482ec947afc780c8891aca9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6037590284825453414, guid: 57673ac60482ec947afc780c8891aca9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -480,6 +510,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Human
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931666693586538395, guid: 57673ac60482ec947afc780c8891aca9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57673ac60482ec947afc780c8891aca9, type: 3}
