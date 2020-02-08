@@ -21,8 +21,7 @@ public class HumanController : MonoBehaviour {
         Invoke("Litter", nextInvoke);
     }
 
-    private void Litter()
-    {
+    private void Litter() {
         animationController.Litter();
 
         float nextInvoke = Random.Range(1f, 5f);
@@ -72,45 +71,48 @@ public class HumanController : MonoBehaviour {
 
     private void createVisionCone() {
 
-        // UnityEngine.Vector2[] endPoints = new UnityEngine.Vector2[9];
-        // List<UnityEngine.Vector2> visionConeVector2 = new List<UnityEngine.Vector2>();
-        // List<UnityEngine.Vector3> visionConeVector3 = new List<UnityEngine.Vector3>();
-        // List<int> triangles = new List<int>();
+        List<UnityEngine.Vector2> endPoints = new List<UnityEngine.Vector2>();
+        GameObject[] corners = GameObject.FindGameObjectsWithTag("verticies");
+        //corners MUST BE WORLD-ORIENTED!
 
-        // for(int i = 0; i < 10; i++) {
-        //     UnityEngine.Vector2 endPoint;
-        //     RaycastHit2D raycast = Physics2D.Raycast(
-        //         new UnityEngine.Vector2(0, 0),
-        //         new UnityEngine.Vector2(alertRadius, alertRadius),
-        //         alertRadius);
-        //         if(raycast.collider != null) {
-        //             endPoint = raycast.point;
-        //         } else {
-        //             endPoint = new UnityEngine.Vector2(0,0);
-        //         }
-        //     endPoints[i] = endPoint;
-        // }
+        // This code worked:
+        
+        // UnityEngine.Vector2[] vertices2D = new UnityEngine.Vector2[] {
+        //     new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f), new UnityEngine.Vector2(2f, 2f)                                            
+        // };
 
-        // for(int i = 0; i < 9; i++) {
-        //     visionConeVector2.Add(new UnityEngine.Vector2(0, 0));
-        //     visionConeVector2.Add(endPoints[i]);
-        //     visionConeVector2.Add(endPoints[i+1]);
+        // This code does not work
 
-        //     visionConeVector3.Add(new UnityEngine.Vector3(0, 0, 0));
-        //     visionConeVector3.Add(new UnityEngine.Vector3(endPoints[i].x, endPoints[i].y, 0));
-        //     visionConeVector3.Add(new UnityEngine.Vector3(endPoints[i+1].x, endPoints[i+1].y, 0));
+        for(int i = 0; i < corners.Length; i++) {
+            UnityEngine.Vector2 corner = new UnityEngine.Vector2(corners[i].transform.position.x, corners[i].transform.position.y);
+            RaycastHit2D endPoint = Physics2D.Raycast(this.transform.position, corner);
+            if(endPoint.collider != null) {
+                endPoints.Add(endPoint.point);
+                Debug.DrawLine (this.transform.position, endPoint.point, Color.red);
+                // Debug.Log(endPoint.point);
+            } else {
+                Debug.DrawLine (this.transform.position, corner, Color.green);
+            }
+        }
 
-        //     triangles.Add();
-        //     triangles.Add();
-        //     triangles.Add();
-        // }
+        // End of broken block
 
-        //     MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
-        //     var visionConeMesh = visionCone.mesh;
-        //     visionConeMesh.Clear();
-        //     visionConeMesh.vertices = visionConeVector3.ToArray();
-        //     visionConeMesh.uv = visionConeVector2.ToArray();
-        //     visionConeMesh.RecalculateNormals();
-        //     visionConeMesh.triangles = triangles.ToArray();
+        UnityEngine.Vector2[] vertices2D = endPoints.ToArray();
+
+        UnityEngine.Vector3[] vertices3D = new UnityEngine.Vector3[vertices2D.Length];
+        for (int i = 0; i < vertices3D.Length; i++) {
+            vertices3D[i] = new UnityEngine.Vector3(vertices2D[i].x, vertices2D[i].y, 0);
+        }
+
+        Triangulator triangulator = new Triangulator(vertices2D);
+        int[] indices = triangulator.Triangulate();
+
+        MeshFilter visionCone = this.GetComponentInChildren<MeshFilter>();
+        var visionConeMesh = visionCone.mesh;
+        visionConeMesh.Clear();
+        visionConeMesh.vertices = vertices3D;
+        visionConeMesh.uv = vertices2D;
+        visionConeMesh.triangles = indices;
+
     }
   }

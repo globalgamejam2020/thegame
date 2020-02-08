@@ -1,0 +1,1155 @@
+commit aa879054f5eb2a9e0e1e5a30904e421111d104a7
+Merge: 2b4ec0a cb89022
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 16:24:20 2020 -0800
+
+    merge conflicts resolved
+
+commit 2b4ec0a7f25499cdfa3902e18fb91f116d243ed7
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 16:21:10 2020 -0800
+
+    scene work
+
+commit cb890220460a62b4e66b9771f8d8948736a5a67e
+Merge: b182692 e743e02
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 16:12:25 2020 -0800
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b18269204cee0c9ffd4e0bd3e8cfaaf616aa19bb
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 16:10:34 2020 -0800
+
+    Demoable scene SarpScene and static tree swaying
+
+commit e743e026c4ed6361dae9e9cd6e762a736efe11b0
+Merge: 70b40eb a86812c
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Mon Feb 3 00:10:20 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 70b40ebbb12476ecc0fd05b991495f7a44bb9e0e
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Mon Feb 3 00:10:13 2020 +0000
+
+    Load intro on game over
+
+commit a86812c81912b802b01e6f7ea7fe353edf1ed1d7
+Merge: 3989bed b57df28
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 16:03:08 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 3989bedb79c223797adf2cc2e8cc84b1bb459175
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 16:03:00 2020 -0800
+
+    squirrels still don't climb trees because trees are not trees
+
+commit b57df28040161ec59358c354309049e581b66f74
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Mon Feb 3 00:00:18 2020 +0000
+
+    Fix intro
+
+commit 2a00af87d2172c589d67369a77d023734a1d1cee
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:55:03 2020 +0000
+
+    Fix intro
+
+commit c96547af58665764dff96f9c9959bb23c4e8b728
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:52:44 2020 +0000
+
+    Fix intro scene
+
+commit dbc07773a52b488d0a763792e4775f1c770369b4
+Merge: 0b4cfaf 8050fc0
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 15:47:04 2020 -0800
+
+    Merge branch 'master' into save
+
+commit 0b4cfaf537d7fa4c309659050ba81ec395f113c2
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 15:45:49 2020 -0800
+
+    scenes fixes
+
+commit 8050fc01102f3ebf9c29422ef69488808dae4b26
+Merge: f2fe0e0 039791f
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 15:39:52 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit f2fe0e03438a35d512d672329c467ad2458207ca
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 15:39:46 2020 -0800
+
+    Tree grass growing and sorting layer
+
+commit 039791fbfa9c81e4db2cb5fa9d417955bbd39536
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:37:30 2020 +0000
+
+    Fix freeplay
+
+commit 5a58d1dd2382b2b907ffb80697897c74987e94d3
+Merge: 94b22b9 eb09bee
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:33:07 2020 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 94b22b956565597f57e189f13a384e9ea5ff0376
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:31:53 2020 +0000
+
+    Fix intro scene and link
+
+commit eb09bee5e6447485dadbb1bb75bee5e6326c099b
+Merge: 385999a 190494c
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 15:29:44 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 385999a0f44b1dfc22094d2d814481a13a1394ed
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 15:29:38 2020 -0800
+
+    campaign started
+
+commit 5ecf31e665a834cff3d5b1c20e265fa4b8e6ecb9
+Merge: 18c7dd7 190494c
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:25:44 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 18c7dd74546c56f5c55f68d27d0964cb6c34d1ad
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:25:40 2020 +0000
+
+    Add intro scene
+
+commit 190494c4929d20ffe225026585af4e0c7d28981e
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 15:22:15 2020 -0800
+
+    Tree Animations with sounds
+
+commit 0a0d7b914e8f3eae38c7de2a40bf4c0d2c6ee84f
+Merge: 914a7af 26a0816
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:13:26 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 26a08161cd6c39abfcb835293defa5e96a83c36b
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 15:12:58 2020 -0800
+
+    fixing these annoying issues with git
+
+commit 914a7afcb1e8437ac620f65a56c62c01ecd01e62
+Merge: 987ce58 c9b928d
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:12:13 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 987ce5894da680dd787f77b54f915055c317eebc
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 23:12:06 2020 +0000
+
+    Fix Level 1 Camera
+
+commit 82da32a4c2238b9ec971b6a48530768bcf197475
+Merge: 7d52347 c9b928d
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 15:08:16 2020 -0800
+
+    merging
+
+commit 7d523474730c3ee9399d66a0adf70f65a3b3532d
+Merge: 2747e35 5dd10a3
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 15:07:36 2020 -0800
+
+    saving humanController
+
+commit c9b928dd42ca393c1e7e57a68068821979dcf549
+Merge: a1f593a 5dd10a3
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 15:06:08 2020 -0800
+
+    unicorn prefab
+
+commit a1f593a9ae8b9287fe463c514129948557642c56
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 15:01:28 2020 -0800
+
+    unicorn prefab audio listener
+
+commit 5dd10a37303e95fad1766093d0a14102458630fb
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 15:00:05 2020 -0800
+
+    fixing error
+
+commit 3eaac9bb63f25399162de4ba42d804a08443e1a1
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 14:58:38 2020 -0800
+
+    unicorn prefab
+
+commit d6103f7ebdd661d4afd8b3b8d1cffa879c84b821
+Merge: 7d21015 556f88b
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 14:57:11 2020 -0800
+
+    Merge branch 'saved'
+
+commit 2747e35b9ada9900fce2e30cc0fdda163485fa37
+Merge: ef8eb48 7d21015
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 14:54:08 2020 -0800
+
+    merging
+
+commit ef8eb488979f451208c9c0f951be4962d10409c3
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 14:53:31 2020 -0800
+
+    squirrels in trees
+
+commit 7d21015609f419c770f5b86410a865b58a52d832
+Merge: f418af3 f83fc06
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 14:52:32 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit f418af39afcb84603093a82e7e05a5ac7f0f9674
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 14:52:25 2020 -0800
+
+    Intro draft scene
+
+commit 556f88b87bb39b2ce49d799505230de85bd13a9e
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 14:51:37 2020 -0800
+
+    Tree anim growing w sounds
+
+commit f83fc068003e50f36f5cb3607a63f70a2255bee8
+Merge: fe0493d 3d1640a
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 22:51:01 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit fe0493d3d3b6a7c933f5efeef7fff471ac2b64e1
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 22:50:56 2020 +0000
+
+    Add scene link
+
+commit 3d1640a7cc4af6be72cce8a796ad8ac952d8e1dd
+Merge: f0c5fe7 394bca8
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 14:20:25 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit f0c5fe7cbad3eb719def2a28ce4cd21c4739180d
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 14:20:10 2020 -0800
+
+    Game over soundFX music system
+
+commit 209bf117f49dc81fc506f359be7c126d65dbaffb
+Merge: 8bf58bb 394bca8
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 22:19:57 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 8bf58bb22bf023e6ca6eabda399f26e4929ac167
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 22:19:53 2020 +0000
+
+    Fixing level 2
+
+commit 394bca84267e0e66fd2318bc6cc13210b509adda
+Merge: 01b80d7 e366d53
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 14:18:59 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 01b80d7a6ff73adf4fcfaa2a8251703eb08e446a
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 14:18:55 2020 -0800
+
+    assets and art added
+
+commit e366d53733150f9839ddf05d8315296749ad99f5
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 22:07:30 2020 +0000
+
+    Fixing scene 2
+
+commit 0898a79db7def0d443f632075f26e2a9d28b8a3c
+Merge: c542a9f fe3965a
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 21:57:42 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit c542a9f3cef8fccabf2f80be93aa6bc30b3ed547
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 21:57:38 2020 +0000
+
+    Fixing Level 1
+
+commit fe3965a76d5d9e65070f51828d21ba0e59b02cd1
+Merge: ba00190 8207775
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 13:53:47 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit ba00190666160f860724689c92db88c78ea640ea
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 13:53:30 2020 -0800
+
+    trees updated
+
+commit 8207775225de21718a35467eb5d4cd4bb9b2d0d3
+Merge: b410fc3 be9c207
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 13:51:08 2020 -0800
+
+    fixing broken build
+
+commit b410fc3a2df7503e1e0f1e2ccedff63ff36348a4
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 13:50:33 2020 -0800
+
+    fixing broken build
+
+commit be9c20733c1575a3e77e50e082b34199e8897319
+Merge: 7f45082 423619b
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 21:49:09 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 7f450822eb3e79d9eb658c2fae57076a8e25c7a1
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 21:49:04 2020 +0000
+
+    Add trees and squirrel behaviour
+
+commit 423619b050a2298499c4c0fabdb6a83033c7a8bc
+Merge: 250bbd0 7274ba4
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 13:48:08 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 250bbd0c671330923f249335512b73829a3623bf
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 13:47:52 2020 -0800
+
+    poop sparkle corect pos
+
+commit 7274ba4f39a8d06beb5754beffd8043931ab6e64
+Merge: 713b71d ade770b
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 13:47:15 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 713b71d8cf016c3635deacd3e8407435be2864c2
+Merge: 8a20c81 b292a73
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 13:46:57 2020 -0800
+
+    wishing my human controller code wored, but giving up
+
+commit ade770b5b5c193a708537acdd9c206a359ce5436
+Merge: 1e70313 b292a73
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 13:45:52 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 1e70313a999f4dd207586bf84e013d50dc9b443a
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 13:45:12 2020 -0800
+
+    voiceovers imported
+
+commit 8a20c81aec1479861a16547b381d3dbcdee05787
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 13:42:26 2020 -0800
+
+    some tree work
+
+commit b292a736bf60f5d639edacaf3c3c3766b2473b57
+Merge: 9056e15 bf1b0c9
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 13:40:18 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 9056e153ffb4878a9fbbf0951db7116522cebbf1
+Merge: 0d772d4 a8ca230
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 13:40:12 2020 -0800
+
+    Line of sight humans game over mechanism
+
+commit bf1b0c90567e0fcc16e34713e564161a2af82950
+Merge: 41de04d a8ca230
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 13:38:34 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 41de04d9b31503b0942625ebd815bc6e989e20cb
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 13:38:20 2020 -0800
+
+    litter and freeplay
+
+commit 0d772d4fa398e8a02a7edc02ac11998df1002608
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 13:36:26 2020 -0800
+
+    Human line of sight and detection, game over mechanics horse neigh sound
+
+commit a8ca230bbdd44a0701c06ad257e43ad95e9b3b8b
+Merge: 6c92c8a e59f05b
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 12:43:37 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 6c92c8a23b305bd0cdd8e13517a742df10210edc
+Merge: d0217c6 0ba7f48
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 12:43:20 2020 -0800
+
+    he poops trees for now, but this is progress, I promise
+
+commit e59f05b2e89c7a1a00db067d0634c8461b4df16d
+Merge: 45117b8 0ba7f48
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 12:35:52 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 45117b8419ea107c84f240015388ee5bd555a5c6
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 12:35:36 2020 -0800
+
+    Sound Assets
+
+commit d0217c6016f8a86b6accd43703cba2bbd5a484db
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 12:30:03 2020 -0800
+
+    tree growth
+
+commit 0ba7f4891752a714107078859d281fd8642859d5
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 20:15:22 2020 +0000
+
+    Making shake subtle
+
+commit 85e9b8e9dd0efe27088d3f0aaff3aaa0ba8ef6d3
+Merge: aad568d 9bfa977
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 12:03:34 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit aad568d2e67ffa039244e2382028c773b727b520
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sun Feb 2 12:03:28 2020 -0800
+
+    squiirel and human animations
+
+commit 9bfa9771778fb797d93264b95320140720ce41a8
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 20:01:45 2020 +0000
+
+    Apply Camera Shake to prefab
+
+commit 1f11cbbf31300f54198bd2d0e790f5c5892b2a66
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 20:01:07 2020 +0000
+
+    Add camera shake on movement, and movement poo
+
+commit beb0160c82adb910ef006203c008c5a699812dfe
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 19:42:01 2020 +0000
+
+    Remove old sprites
+
+commit 800c5597081e75f2812dc43c13043f879101fa24
+Merge: fb5d53d 86c85f6
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 19:39:51 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit fb5d53d25e30f60d6e99e1c284cca728501b9ce6
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 19:39:47 2020 +0000
+
+    Fix walking and pooping
+
+commit 86c85f66e3b3c5d4117b6164ded480db48938f23
+Merge: afd9fc2 6764c86
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 11:02:37 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit afd9fc2a4f4cff28860c18d1ad304d9ad436e81b
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 11:02:31 2020 -0800
+
+    minor human updates - vision cones will be messed up
+
+commit 6764c86f6546b306caa384ad11c74b8795d5a2ad
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 18:00:11 2020 +0000
+
+    Fix level 2 prefab
+
+commit 13c22c98404de262d3be65c1a8b5a378786b6241
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 09:47:15 2020 -0800
+
+    Level 2 built
+
+commit 11625c3a5664eb30e2d4c64fff7317c53755d910
+Merge: f7df55e bd15423
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 08:51:33 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit f7df55e6dac38ad0a19363f739118a4e21e298fb
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 08:51:27 2020 -0800
+
+    Level 1 done
+
+commit bd15423ae568f19236aae0a68dacafae237652c0
+Merge: c794b13 3b0d6e0
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 00:41:19 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit c794b134a3f5ee42921a98d8300d16e076b4e895
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sun Feb 2 00:41:13 2020 -0800
+
+    vision cones don't work
+
+commit 3b0d6e030cd29a9f5e04e18364b78a23ae6b99e6
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sun Feb 2 00:39:54 2020 -0800
+
+    Level Assets updated
+
+commit aa18e6b37d9d7bd6dc8dabd8ffb26713658852cd
+Merge: 996ed1d a6d0ca3
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 23:39:59 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 996ed1d62e6068567f0c994555657af6e70223b2
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 23:39:55 2020 -0800
+
+    messing with my scene
+
+commit a6d0ca34cec144e02f6a19baa005cca97865cb9a
+Merge: 2f79076 126959b
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 23:37:28 2020 -0800
+
+    New Assets
+
+commit 2f79076caf0dfe83bb466656059102661c6373be
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 23:35:01 2020 -0800
+
+    New Assets
+
+commit 126959bd58a0ef5457b1689434c8a985221daaa8
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 23:19:54 2020 -0800
+
+    getting closer on the vision cones
+
+commit c7e3884ecc061f95da40dee68de580fa869912bb
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 23:06:38 2020 -0800
+
+    I'm so happy this is drawing that I'm committing now even though it's super not right
+
+commit c980c421b4c32d2560b259f1941528770181e909
+Merge: 62e0fa6 3c14860
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 22:38:23 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 62e0fa62a4aa4afe94fdf6d3435c0b29bb2018d4
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 22:37:56 2020 -0800
+
+    copying level 1 over GlensScene
+
+commit 3c148600eeefd1416fbc25fcb11a8a4698228ab7
+Merge: dec4863 e3ece48
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 06:37:13 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit dec486396dea8c09c69558d6195972a0639c84ba
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 06:35:47 2020 +0000
+
+    Fix rotation and walking bounds
+
+commit e3ece481ef016ded6d4793bade7acc8d97eb5895
+Merge: b898a1a 13613a1
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 22:22:29 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit b898a1adfc203423f6f38e6ec796e44f8c9e0c14
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 22:22:24 2020 -0800
+
+    temp vision cones on human prefabs
+
+commit 13613a1154f38f06f8fb00481e7a6bd58380bf04
+Merge: b15f30c c5a6ec6
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 06:10:04 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit b15f30c9f21f0a5b08f872d71daebb5b536567e3
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 06:09:59 2020 +0000
+
+    Add rotation
+
+commit c5a6ec6d6b22c148ba1bae22fab2e6f912838503
+Merge: 4b20a43 22336f1
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 22:06:02 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 4b20a438c03e79f2ff52b90e39ef20fe1c0f3992
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 22:05:49 2020 -0800
+
+    Lvl updates
+
+commit 22336f1ef3ba82150f3a7e10007b713299e4eac0
+Merge: 5ad87bf 884fb14
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 21:56:49 2020 -0800
+
+    fix merge conflict in human controller
+
+commit 5ad87bf8e9019c41bade9cbc698c199efeed9ce9
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 21:54:27 2020 -0800
+
+    level 1 updates
+
+commit 884fb14ed530c3eec97d2b0bab1b88c5d2798f4b
+Merge: 76296f2 d83bc23
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 05:36:55 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 76296f28dd861624ca3a7e90f8153d4017f2c1ac
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 05:35:15 2020 +0000
+
+    Fix movement and trying to add rotation
+
+commit d83bc234185234e796c526b8ede9714b017d3124
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 21:18:13 2020 -0800
+
+    Squirrels added, animator animations sound
+
+commit 1fda4da061d0ab8ea81aa132ffa5c83185b0ca50
+Merge: 7f2e6f4 c8179d2
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 19:50:18 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 7f2e6f40a60353069fbfaa8965384de9f7eeec3c
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 19:50:14 2020 -0800
+
+    Animated random poop, squirrel sprites added, animator controller transitions fixed
+
+commit c8179d2a48ee0dfaee4b86c9b233ee4c9a2efb1e
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 03:49:40 2020 +0000
+
+    Fix movement and camera
+
+commit 4731f621299205e463977bd5f7f485822c7ad7e9
+Merge: 7f7956d 68c4a0d
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 02:51:26 2020 +0000
+
+    Merge branch 'unicorn'
+
+commit 7f7956d66a234d4215dee7d6bbed30a730618f11
+Merge: bc6544e 7e690da
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 02:51:13 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 68c4a0d6a16e9be3a18dde88db2f211793c43f77
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 02:51:00 2020 +0000
+
+    Fix unicorn
+
+commit 7e690da2c579fc49d0541cf3982007adcd734933
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 18:50:48 2020 -0800
+
+    Added pooping with sounds + resources folder for easy instantiation from script
+
+commit bc6544eb4ebf5cd3ed102e5112d4248f93427a09
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 02:50:19 2020 +0000
+
+    Add Camera that follows player
+
+commit c6984757e1d1535dac861430e5dd9e3662920a75
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 18:38:00 2020 -0800
+
+    human moves
+
+commit ec54197fc8a89b0a9f7c84c68ea361587ceebc84
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 18:27:04 2020 -0800
+
+    bouncing humans
+
+commit a9adf72ac3f789d6edfbdc8a37c052cf65f567d5
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 17:50:37 2020 -0800
+
+    initial movement planning
+
+commit 2707711f797a8d0a749f09d9dc01ccd9cae7a8ea
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 17:47:36 2020 -0800
+
+    initial movement planning
+
+commit 3b94817b728f3c414e2f7838b05035be5874d8bc
+Merge: d6806ec ec076d6
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 17:21:32 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit d6806ec546521e148728bcfa9f2fee26851f50de
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 17:21:10 2020 -0800
+
+    lvl2 v1
+
+commit ec076d6b4331018d403677508258d3ef7e74ea4a
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 01:19:46 2020 +0000
+
+    Removing water from level 0
+
+commit d6e0d7f14e73cb64afbc43dae6525089d2946eb8
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 01:16:26 2020 +0000
+
+    Fix unicorn in Level 1
+
+commit 95d947912c3a1939580dbc22b3f2d7c9df6240ad
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 01:10:49 2020 +0000
+
+    Making unicorn faster
+
+commit cc5a1a44064c544c13a1813af1f3c237b625769a
+Merge: 52159ea f89eef4
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 01:10:11 2020 +0000
+
+    Merge branch 'unicorn'
+
+commit 52159ea66670c76a2f799534d68e350c7cce58a2
+Merge: 0250264 9f413b3
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 17:06:19 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 0250264e4b2d4b7001be64794e16b08741a57563
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 17:06:09 2020 -0800
+
+    Walking sounds and animation work on unicorn movement
+
+commit f89eef421a06298a0be0360c7fa527d4f30deb22
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 01:05:24 2020 +0000
+
+    Add movement and check in the GridSystem
+
+commit 9f413b3e37a57c97a1af6fd13963aecb9077cc1b
+Merge: 53c79cc a466edb
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 16:45:55 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 53c79ccf6a542d885f056d83cde464c1d1431f5c
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 16:45:48 2020 -0800
+
+    level 2
+
+commit a466edbcd9eb284ba3d80015ef605a389a577808
+Merge: 95625be 392ded3
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 16:25:30 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 392ded3c97cf451b3e4c83941cb000e95ad4d470
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 16:23:54 2020 -0800
+
+    level 1 with human prefab
+
+commit 4f9199d9b437eb236c8f994702e37469bbabee9f
+Merge: b496571 3819f91
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 16:18:57 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit b496571d5af72c3eedd78e1235e29203c17725a9
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 16:18:45 2020 -0800
+
+    beginning work on path finding
+
+commit 95625be911e5eb4bbef88c2e5368f1df6cb93626
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 16:18:17 2020 -0800
+
+    Basic animation controller for unicorn w parameters and animations for movement
+
+commit 3819f91543e1ea9bf068e08005e8891dbe0aa93c
+Merge: e2c32c5 9ead90b
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 00:16:09 2020 +0000
+
+    Merge branch 'squirrel'
+
+commit 9ead90b7762519762348103555f081dd7ca7d9ba
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sun Feb 2 00:10:08 2020 +0000
+
+    Add squirrel prefab
+
+commit 2196f5884426ceabed01f832d00e61fc17557916
+Merge: 85740c2 e2c32c5
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 15:57:32 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit e2c32c5c9b3b7f024da7816ee509d08454da10b3
+Merge: 418c84f 57ed3d7
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 15:57:00 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 418c84f93e9e90d72595607cefe6ad8491b187ef
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 15:56:47 2020 -0800
+
+    updating level 1 to prefab status
+
+commit 57ed3d72d1b89365548bae9c1b5e76452e8e62e5
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 23:51:54 2020 +0000
+
+    Add camera prefab
+
+commit ce493d4c8a5c956ec17f21482d4934f60fc5e7bf
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 23:49:54 2020 +0000
+
+    Fix compilation error and prefabs
+
+commit 85740c22dcafebbb2d7a86a928517eede2be0cb1
+Merge: 6042736 c11ba15
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 15:47:45 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 6042736714f5a11cd2f39994ca2ebe6f98c782ca
+Author: Jennifer Pierce <jen@jennifers-mbp.wifi.bcit.ca>
+Date:   Sat Feb 1 15:47:39 2020 -0800
+
+    Jennifer's tinychanges
+
+commit c11ba15b2e8bda20a9b6a76f71c953250ff8a461
+Merge: 29d6910 ba1b3bd
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 23:22:00 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 29d69101eb84b0580110621244e62dc9a177adb9
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 23:21:49 2020 +0000
+
+    Fix eternal movement
+
+commit ba1b3bdd99c3665561f24a8ba048a2a0cddbc0fc
+Merge: 3e575b8 7741d24
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 15:08:35 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 3e575b89a7bc31ceb4133565dd4483b4b5906d70
+Author: Sarp Saysel <sarp@jostle.me>
+Date:   Sat Feb 1 15:08:05 2020 -0800
+
+    Added AudioController and AnimationController, along with animation sprites, slight changes to MovementDirection new enum for use in animations
+
+commit 7741d2413d4ce8d87bca172e5ebd1f7ed1ebec8e
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 15:04:58 2020 -0800
+
+    movement
+
+commit e66ad7c9cae078983d555581e2aaeaaa180e421f
+Merge: 6e3618e fb2e78b
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 22:31:04 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 6e3618e0609fd3b3034cae3bb4560d7156577bc8
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 22:31:00 2020 +0000
+
+    Move humans and squirrels to game objects
+
+commit fb2e78ba3148318552fdd0773c9c494e56cf48ee
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 13:54:56 2020 -0800
+
+    jens first level
+
+commit e540a98dfe65e90dd3db36a8986e4989e01760f5
+Merge: 898b2e9 371bb9c
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 13:26:18 2020 -0800
+
+    Merge branch 'master' of https://github.com/globalgamejam2020/thegame
+
+commit 898b2e92d12c5dba577680cfe791cd607db148ec
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 13:23:43 2020 -0800
+
+    humans move... broken
+
+commit 371bb9c51fec233dae6f93ad4dc9a2ae5ab82319
+Merge: 1a0a9c6 331737f
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 20:40:06 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 1a0a9c6921adc354773d0800123ccf8010616aa6
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 20:39:52 2020 +0000
+
+    Add GridObject index test
+
+commit 331737f9bfeeccb63d42c1033d198cc909a12e71
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 12:29:45 2020 -0800
+
+    animators
+
+commit a3b5500164a4cde6705d10a5b23512e8439394a7
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 20:07:14 2020 +0000
+
+    Add tiles to palette, and moved animations to its own folder
+
+commit a9b15b97d61b6dd443197bed38c54b188ba4fdfa
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 20:05:21 2020 +0000
+
+    Move tiles
+
+commit 77a0cd11c37bd9884b3b88a783353caddd26ab64
+Merge: 08b6f7c 2a82994
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 20:02:30 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 2a8299418bfdff7b25e18d75f815f366718752e4
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 12:02:14 2020 -0800
+
+    animations initial
+
+commit 08b6f7c44ae51e90513cfe821a0c0873334c2b27
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 20:02:00 2020 +0000
+
+    Add Level 1 Scene
+
+commit a3da98ae3d6319d7331adb6b98b3c25544742767
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 19:59:11 2020 +0000
+
+    Add Level 1 prefab
+
+commit 7174fa01a8a7636dc53291715269c07c9d7f1c42
+Merge: 262329b 4ee60eb
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 19:48:32 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit 262329b5595ccbebbc05ea368a0ed3d397a2a3b3
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 19:48:29 2020 +0000
+
+    Working on GridSystem
+
+commit 4ee60ebb4475f18eb7de1f38d9fcabce5d72241b
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Sat Feb 1 11:28:45 2020 -0800
+
+    human prefab update
+
+commit 3cd2ff3bd6f2e59b636a1449ed8ff8c2892bb096
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Fri Jan 31 22:27:54 2020 -0800
+
+    human initial prefab
+
+commit c98f0ae981b025047ab65072e3b1e0a8d4ddb287
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 06:19:21 2020 +0000
+
+    Add Tiles, Tilemap, and Tile Palette
+
+commit 9fa82277694804a4e3fd15c0bdc693e05931ee6d
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 05:59:19 2020 +0000
+
+    Add Prefabs
+
+commit e0e329850749016fe434485dec59331f0e06d844
+Merge: c7ce6fb 7ffc05f
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 05:50:46 2020 +0000
+
+    Merge branch 'master' of github.com:globalgamejam2020/thegame
+
+commit c7ce6fb2662d62c3cda141332e165f0547c96919
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 05:48:05 2020 +0000
+
+    Add some scripts
+
+commit 7ffc05f353f7477753a1de3f048bcd72cbfb78d1
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Fri Jan 31 21:44:48 2020 -0800
+
+    intial assets temporary
+
+commit b3b13424d99f6a3b99e8f14d90d52a1d08f3d849
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Fri Jan 31 21:33:18 2020 -0800
+
+    initial temporary assets
+
+commit 7893706efb205e69baa448d184b6e4ba7a19dd43
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 05:18:03 2020 +0000
+
+    Add gitattributes and Sprites tree structure
+
+commit bcaaffa5d39d2e0450b29a07ed1396478062b3f2
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 04:38:45 2020 +0000
+
+    Initiated unity project
+
+commit a179dc7508e179bdf48261d867a9af70bb35125c
+Author: Rafael Rubem Rossi Souza Guerreiro <guerreiro.dev@gmail.com>
+Date:   Sat Feb 1 03:03:13 2020 +0000
+
+    Add .idea and .DS_Store to .gitignore
+
+commit f2a7a5ec6ca2ea77116455292b4eef2fbb406815
+Author: Glen Pierce <glen.piercev@gmail.com>
+Date:   Fri Jan 31 18:53:48 2020 -0800
+
+    Initial commit
