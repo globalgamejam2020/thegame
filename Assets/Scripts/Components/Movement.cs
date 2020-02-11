@@ -119,11 +119,11 @@ namespace Component {
 
             targetEuler = angles;
 
-            if (!GridSystem.Instance.AllowsMovement(destination)) {
-                destination = origin;
-                this.direction = 0;
-                return false;
-            }
+            // if (!GridSystem.Instance.AllowsMovement(destination)) {
+            //     destination = origin;
+            //     this.direction = 0;
+            //     return false;
+            // }
 
             return true;
         }

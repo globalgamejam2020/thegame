@@ -73,6 +73,7 @@ namespace Component {
             GameObject[] trees = GameObject.FindGameObjectsWithTag("tree");
 
             foreach (GameObject tree in trees) {
+                // IsTree isTree = (IsTree)tree;
                 RaycastHit2D endPoint = Physics2D.Raycast(this.transform.position, tree.transform.position);
                 if(endPoint.collider != null) {
                     

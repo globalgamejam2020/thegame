@@ -72,32 +72,29 @@ public class HumanController : MonoBehaviour {
     private void createVisionCone() {
 
         List<UnityEngine.Vector2> endPoints = new List<UnityEngine.Vector2>();
+        endPoints.Add(new UnityEngine.Vector2(0,0));
         GameObject[] corners = GameObject.FindGameObjectsWithTag("verticies");
-        //corners MUST BE WORLD-ORIENTED!
-
-        // This code worked:
-        
-        // UnityEngine.Vector2[] vertices2D = new UnityEngine.Vector2[] {
-        //     new UnityEngine.Vector2(0, 0), new UnityEngine.Vector2(-2f, 2f), new UnityEngine.Vector2(2f, 2f)                                            
-        // };
-
-        // This code does not work
 
         for(int i = 0; i < corners.Length; i++) {
             UnityEngine.Vector2 corner = new UnityEngine.Vector2(corners[i].transform.position.x, corners[i].transform.position.y);
-            RaycastHit2D endPoint = Physics2D.Raycast(this.transform.position, corner);
+            UnityEngine.Vector2 raycastTarget = new UnityEngine.Vector2(corner.x - this.transform.position.x, corner.y - this.transform.position.y);
+            raycastTarget.Normalize();
+            RaycastHit2D endPoint = Physics2D.Raycast(this.transform.position, raycastTarget);
             if(endPoint.collider != null) {
                 endPoints.Add(endPoint.point);
-                Debug.DrawLine (this.transform.position, endPoint.point, Color.red);
-                // Debug.Log(endPoint.point);
+                Debug.DrawLine(this.transform.position, endPoint.point, Color.red);
             } else {
-                Debug.DrawLine (this.transform.position, corner, Color.green);
+                Debug.DrawLine(this.transform.position, corner, Color.green);
             }
         }
 
-        // End of broken block
-
         UnityEngine.Vector2[] vertices2D = endPoints.ToArray();
+
+        if(vertices2D.Length > 2) {
+            for (int i = 1; i < vertices2D.Length; i++) {
+                Debug.DrawLine(endPoints[i-1], endPoints[i], Color.blue);
+            }
+        }
 
         UnityEngine.Vector3[] vertices3D = new UnityEngine.Vector3[vertices2D.Length];
         for (int i = 0; i < vertices3D.Length; i++) {
