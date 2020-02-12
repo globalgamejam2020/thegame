@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Net;
+using System;
+using System.Linq;
 using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,14 +19,14 @@ public class HumanController : MonoBehaviour {
     void Start() {
         movement = GetComponent<Movement>();
         animationController = GetComponent<AnimationController>();
-        float nextInvoke = Random.Range(1f, 5f);
+        float nextInvoke = UnityEngine.Random.Range(1f, 5f);
         Invoke("Litter", nextInvoke);
     }
 
     private void Litter() {
         animationController.Litter();
 
-        float nextInvoke = Random.Range(1f, 5f);
+        float nextInvoke = UnityEngine.Random.Range(1f, 5f);
         Invoke("Litter", nextInvoke);
     }
 
@@ -72,19 +74,29 @@ public class HumanController : MonoBehaviour {
     private void createVisionCone() {
 
         List<UnityEngine.Vector2> endPoints = new List<UnityEngine.Vector2>();
-        endPoints.Add(new UnityEngine.Vector2(0,0));
+        endPoints.Add(this.transform.position);
         GameObject[] corners = GameObject.FindGameObjectsWithTag("verticies");
 
-        for(int i = 0; i < corners.Length; i++) {
-            UnityEngine.Vector2 corner = new UnityEngine.Vector2(corners[i].transform.position.x, corners[i].transform.position.y);
-            UnityEngine.Vector2 raycastTarget = new UnityEngine.Vector2(corner.x - this.transform.position.x, corner.y - this.transform.position.y);
+        SortedList<float, UnityEngine.Vector2> cornerList = new SortedList<float, UnityEngine.Vector2>();
+
+        foreach(GameObject corner in corners) {
+            float polarCoordinateTheta = (float)Math.Atan(System.Convert.ToDouble(corner.transform.position.y / corner.transform.position.x));
+            try {
+                cornerList.Add(polarCoordinateTheta, new UnityEngine.Vector2(corner.transform.position.x, corner.transform.position.y));
+            } catch(ArgumentException exception) {
+                cornerList.Add(polarCoordinateTheta + UnityEngine.Random.Range(0.0001f, 0.001f), new UnityEngine.Vector2(corner.transform.position.x, corner.transform.position.y));
+            }
+        }
+
+        foreach(KeyValuePair<float, UnityEngine.Vector2> corner in cornerList) {
+            UnityEngine.Vector2 raycastTarget = new UnityEngine.Vector2(corner.Value.x - this.transform.position.x, corner.Value.y - this.transform.position.y);
             raycastTarget.Normalize();
             RaycastHit2D endPoint = Physics2D.Raycast(this.transform.position, raycastTarget);
             if(endPoint.collider != null) {
                 endPoints.Add(endPoint.point);
                 Debug.DrawLine(this.transform.position, endPoint.point, Color.red);
             } else {
-                Debug.DrawLine(this.transform.position, corner, Color.green);
+                Debug.DrawLine(this.transform.position, corner.Value, Color.green);
             }
         }
 
